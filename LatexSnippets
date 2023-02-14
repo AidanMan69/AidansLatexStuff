@@ -1,0 +1,129 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	//"Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+"Two by Two Matrix": {
+	"prefix": "tom",
+	"body": [
+	 	"\\begin{pmatrix} $1 & $2 \\\\\\ $3 & $4 \\end{pmatrix}",
+	 	],
+	"description": "Two by Two Matrix"
+},
+
+"Inline Math": {
+	"prefix": "mat",
+	"body": [
+	 	"\\($1\\)"
+	 	],
+	"description": "Inline Math"
+
+},
+
+"fraction": {
+	"prefix": "frac",
+	"body": [
+	 	"\\frac{$1}{$2}"
+	 	],
+	"description": "fraction"
+
+},
+
+"equation": {
+	"prefix": "eqn",
+	"body": [
+	 	"$1 = $2"
+	 	],
+	"description": "fraction"
+
+},
+
+"box it in": {
+	"prefix": "box",
+	"body": [
+	 	"\\boxed{$1}"
+	 	],
+	"description": "box"
+
+},
+
+"three by three matrix": {
+	"prefix": "tem",
+	"body": [
+	 	"\\begin{pmatrix} $1 & $2 & $3 \\\\\\ $4 & $5 & $6 \\\\\\ $7 & $8 & $9 \\end{pmatrix}"
+	 	],
+	"description": "three by three matrix"
+
+},
+
+"four by four matrix": {
+	"prefix": "fom",
+	"body": [
+	 	"\\begin{pmatrix} $1 & $2 & $3 & $4 \\\\\\ $5 & $6 & $7 & $8 \\\\\\ $9 & $10 & $11 & $12 \\\\\\ $13 & $14 & $15 & $16 \\end{pmatrix}"
+	 	],
+	"description": "three by three matrix"
+
+},
+
+"dot": {
+	"prefix": "dot",
+	"body": [
+	 	"\\centerdot"
+	 	],
+	"description": "dot"
+},
+
+"augmented 2x2": {
+	"prefix": "atw",
+	"body": [
+	 	"\\spalignaugmat{$1 $2 $3; $4 $5 $6}"
+	 	],
+	"description": "augmented 2x2"
+},
+
+"augmented 3x3": {
+	"prefix": "ath",
+	"body": [
+	 	"\\spalignaugmat{$1 $2 $3 $4; $5 $6 $7 $8; $9 $10 $11 $12}"
+	 	],
+	"description": "augmented 3x3"
+},
+
+"augmented 4x4": {
+	"prefix": "afo",
+	"body": [
+	 	"\\spalignaugmat{$1 $2 $3 $4 $5; $6 $7 $8 $9 $10; $11 $12 $13 $14 $15; $16 $17 $18 $19 $20}"
+	 	],
+	"description": "augmented 4x4"
+},
+
+"implies": {
+	"prefix": "imp",
+	"body": [
+	 	"\\implies"
+	 	],
+	"description": "implies"
+},
+
+"text": {
+	"prefix": "tex",
+	"body": [
+	 	"\\text{$1}"
+	 	],
+	"description": "text"
+},
+
+}
