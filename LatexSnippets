@@ -126,4 +126,78 @@
 	"description": "text"
 },
 
+
+"centered math": {
+	"prefix": "cmat",
+	"body": [
+	 	"\\begin{align*} $1 \\end{align*}"
+	 	],
+	"description": "centered math"
+},
+
+"integral": {
+	"prefix": "int",
+	"body": [
+	 	"\\int $2 d$1"
+	 	],
+	"description": "integral"
+},
+
+"definite integral": {
+	"prefix": "dint",
+	"body": [
+	 	"\\int_{$1}^{$2} $4 d$3"
+	 	],
+	"description": "definite integral"
+},
+
+"greater than or equal to": {
+	"prefix": "geq",
+	"body": [
+	 	"\\geq"
+	 	],
+	"description": "greater than or equal to"
+},
+
+"less than or equal to": {
+	"prefix": "leq",
+	"body": [
+	 	"\\leq"
+	 	],
+	"description": "less than or equal to"
+},
+
+"is an element of": {
+	"prefix": "el",
+	"body": [
+	 	"\\in"
+	 	],
+	"description": "is an element of"
+},
+
+"blackboard letter": {
+	"prefix": "bb",
+	"body": [
+	 	"\\mathbb{$1}"
+	 	],
+	"description": "blackboard letter"
+},
+
+
+"left right arrow": {
+	"prefix": "lra",
+	"body": [
+	 	"\\Leftrightarrow"
+	 	],
+	"description": "left right arrow"
+},
+
+"set builder": {
+	"prefix": "sb",
+	"body": [
+	 	"\\left\\{$1 | $2 \\right\\\\}"
+	 	],
+	"description": "left right arrow"
+},
+
 }
