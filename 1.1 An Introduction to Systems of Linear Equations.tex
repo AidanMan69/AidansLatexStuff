@@ -1,0 +1,138 @@
+\documentclass{jhwhw}
+\author{Aidan Garcia}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{spalign}
+\usepackage{nicefrac}
+\usepackage{tabto}
+\usepackage{parskip}
+\title{1.1: An Introduction to Systems of Linear Equations}
+
+\begin{document}
+ \maketitle   
+
+A linear equation in \(n>1\) variables \(x_1,x_2,x_3,\ldots,x_n\) has the form
+\\
+(\(\star\)) \(a_1 x_1 + a_2 x_2 + a_3 x_3 +\ldots+a_n x_n=b\)
+\\
+
+here \(a_i\) is a constant for any \(1 \leq i \leq n\) and \(b\) is a constant
+\\
+
+\(a_i\) are the coefficients of (\(\star\)) \\
+\(x_i\) are the variables \\
+\(a_1\) is the leading coefficient \\
+\(x_1\) is the leading variable
+\\
+
+\textbf{Example: the following equations are linear}
+\\
+a) \(2x-3y=1\) (2 variables) \\
+\(\rightarrow\) represents a line of the xy plane 
+\\
+b) \(x+y-z=2\) (3 variables) \\
+\(\rightarrow\) represents a plane in the xyz coordinate system
+\\ \\
+
+\textbf{Example: the following equations are non-linear}
+\\
+1) \( \boxed{x^2} + y + z =0\) \(\leftarrow\) non-linear function \(x\)
+\\
+2) \(\boxed{xy} + z = -1\) \(\leftarrow\) x and y are not independent of eachother
+\\
+3) \(\boxed{\cos x} + y + z = 3\) \(\leftarrow\) non-linear function of \(x\)
+\\ \\
+
+\underline{Definition (Solution and Solution Set of (\(\star\))):}
+\\
+
+A solution of (\(\star\)) is a sequence of n real numbers  \(s_1, s_2, s_3,\ldots,s_n\) that satisfy  (\(\star\))
+\\
+
+The set of solutions of (\(\star\)) is called a solution set
+\\
+
+Remark: The solution of (\(\star\)) is a linear equation in \(n\) variables does have a parametric representation.
+\\ \\
+
+\textbf{Example: Find a parametric representation of each linear equation}
+\\
+
+a) \(\boxed{1}\) \(2x_1 - 3x_2 = 1\) (a linear equation in \(n=2\) represents a line in \(\mathbb{R} ^2\))
+\\
+let \(x_2=t\), here \(t \in \mathbb{R}\)
+\\
+
+\begin{align*} 
+then \boxed{1} &\Leftrightarrow 2x_1 - 3t = 1 \\
+&\Leftrightarrow 2x_1 = 1 + 3t \\
+&\Leftrightarrow x_1 = \frac{1}{2} + \frac{3}{2}t \\
+\end{align*}
+
+Then the solution set of \(\boxed{1}\) is 
+\\
+\(\left\{(x_1 , x_2) | x_1 = \frac{1}{2} + \frac{3}{2}t \text{ and } x_2 = t \text{, } t \in \mathbb{R} \right\}\)
+\\
+\(\boxed{= \left\{\left(\frac{1}{2} + \frac{3}{2}t, t\right) | t \in \mathbb{R} \right\}}\) A paramaterization of the solution set
+\\ \\
+
+b) \(\boxed{2}\) \(x_1 + 2x_2 - x_3 = 4\)
+\\
+Let \(x_3 = t\), \(t \in \mathbb{R}\) is a parameter
+\\
+Let \(x_2 = s\), \(s \in \mathbb{R}\) is a parameter
+\\
+
+then \(\boxed{2}\) \(x_1 + 2s - t = 4\) \\
+\(\Leftrightarrow x_2 = -2s + t + 4\), \(t \in \mathbb{R}\) and \(s \in \mathbb{R}\)
+\\
+Then the solution set of \(\boxed{2}\) is
+\\
+
+\(\left\{(x_1, x_2, x_3) | x_1 = -2s + t + 4, x2 = s, x_3 = t, s \in \mathbb{R} \text{ and } t \in \mathbb{R} \right\}\)
+\\
+\(\boxed{= \left\{(-2s + t + 4, s, t) | s \in \mathbb{R} \text{ and } t \in \mathbb{R} \right\}}\)
+\\ \\
+
+\underline{Definition (System of linear equations in \(n \geq 1\) variables):}
+\\
+
+A system of \(m \geq 1\) linear equation in \(n \geq 1\) variables is a set of \(m\) equations, each of which is linear in the same \(n\) variables
+\\
+
+(\(\star\)) \begin{align*} 
+a_{11} x_1 + a_{12} x_2 + a_{13} x_3 + \ldots + a_{1n} x_n &= b_1\\
+a_{21} x_1 + a_{22} x_2 + a_{23} x_3 + \ldots + a_{2n} x_n &= b_2\\
+a_{31} x_1 + a_{32} x_2 + a_{33} x_3 + \ldots + a_{3n} x_n &= b_3\\
+\vdots \\
+a_{m1} x_1 + a_{m2} x_2 + a_{m3} x_3 + \ldots + a_{mn} x_n &= b_m
+\end{align*}
+\\
+
+A solution of (\(\star\)) is a sequence of numbers \(s_1, s_2, s_3, \ldots, s_n\) that is a solution of each equation of the system.
+\\
+
+Remark (On the number of solutions of a system (\(\star\)) of linear equations):
+\\
+
+For a given system of linear equations (\(\star\)) Precisely one of the following statements is true:
+\\
+
+1) The system (\(\star\)) has exactly one solution (system is consistent) \\
+2) The system (\(\star\)) has infinitely many solutions (system is consistent) \\
+3) The system (\(\star\)) has no solutions (system is inconsistent) \\
+
+
+
+
+
+
+
+
+
+
+\end{document}
