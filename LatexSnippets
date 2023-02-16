@@ -200,4 +200,12 @@
 	"description": "left right arrow"
 },
 
+"right arrow": {
+	"prefix": "ria",
+	"body": [
+	 	"\\rightarrow"
+	 	],
+	"description": "right arrow"
+},
+
 }
