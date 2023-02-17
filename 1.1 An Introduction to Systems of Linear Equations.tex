@@ -16,13 +16,13 @@
 
 A linear equation in \(n>1\) variables \(x_1,x_2,x_3,\ldots,x_n\) has the form
 \\
-(\(\star\)) \(a_1 x_1 + a_2 x_2 + a_3 x_3 +\ldots+a_n x_n=b\)
+(\(\ast\)) \(a_1 x_1 + a_2 x_2 + a_3 x_3 +\ldots+a_n x_n=b\)
 \\
 
 here \(a_i\) is a constant for any \(1 \leq i \leq n\) and \(b\) is a constant
 \\
 
-\(a_i\) are the coefficients of (\(\star\)) \\
+\(a_i\) are the coefficients of (\(\ast\)) \\
 \(x_i\) are the variables \\
 \(a_1\) is the leading coefficient \\
 \(x_1\) is the leading variable
@@ -46,16 +46,16 @@ b) \(x+y-z=2\) (3 variables) \\
 3) \(\boxed{\cos x} + y + z = 3\) \(\leftarrow\) non-linear function of \(x\)
 \\ \\
 
-\underline{Definition (Solution and Solution Set of (\(\star\))):}
+\underline{Definition (Solution and Solution Set of (\(\ast\))):}
 \\
 
-A solution of (\(\star\)) is a sequence of n real numbers  \(s_1, s_2, s_3,\ldots,s_n\) that satisfy  (\(\star\))
+A solution of (\(\ast\)) is a sequence of n real numbers  \(s_1, s_2, s_3,\ldots,s_n\) that satisfy  (\(\ast\))
 \\
 
-The set of solutions of (\(\star\)) is called a solution set
+The set of solutions of (\(\ast\)) is called a solution set
 \\
 
-Remark: The solution of (\(\star\)) is a linear equation in \(n\) variables does have a parametric representation.
+Remark: The solution of (\(\ast\)) is a linear equation in \(n\) variables does have a parametric representation.
 \\ \\
 
 \textbf{Example: Find a parametric representation of each linear equation}
@@ -101,7 +101,7 @@ Then the solution set of \(\boxed{2}\) is \\
 A system of \(m \geq 1\) linear equation in \(n \geq 1\) variables is a set of \(m\) equations, each of which is linear in the same \(n\) variables
 \\
 
-(\(\star\)) \begin{align*} 
+(\(\ast\)) \begin{align*} 
 a_{11} x_1 + a_{12} x_2 + a_{13} x_3 + \ldots + a_{1n} x_n &= b_1\\
 a_{21} x_1 + a_{22} x_2 + a_{23} x_3 + \ldots + a_{2n} x_n &= b_2\\
 a_{31} x_1 + a_{32} x_2 + a_{33} x_3 + \ldots + a_{3n} x_n &= b_3\\
@@ -110,26 +110,250 @@ a_{m1} x_1 + a_{m2} x_2 + a_{m3} x_3 + \ldots + a_{mn} x_n &= b_m
 \end{align*}
 \\
 
-A solution of (\(\star\)) is a sequence of numbers \(s_1, s_2, s_3, \ldots, s_n\) that is a solution of each equation of the system.
+A solution of (\(\ast\)) is a sequence of numbers \(s_1, s_2, s_3, \ldots, s_n\) that is a solution of each equation of the system.
 \\
 
-Remark (On the number of solutions of a system (\(\star\)) of linear equations):
+Remark (On the number of solutions of a system (\(\ast\)) of linear equations):
 \\
 
-For a given system of linear equations (\(\star\)) Precisely one of the following statements is true:
+For a given system of linear equations (\(\ast\)) Precisely one of the following statements is true:
 \\
 
-1) The system (\(\star\)) has exactly one solution (system is consistent) \\
-2) The system (\(\star\)) has infinitely many solutions (system is consistent) \\
-3) The system (\(\star\)) has no solutions (system is inconsistent) \\
+1) The system (\(\ast\)) has exactly one solution (system is consistent) \\
+2) The system (\(\ast\)) has infinitely many solutions (system is consistent) \\
+3) The system (\(\ast\)) has no solutions (system is inconsistent) \\
+\\
 
+a) (\(\ast\)) \begin{align*} 
+    x+y &= 0 \\
+    x-y &=1
+\end{align*}
 
+(\(\ast\)) is a system of \(m =2 \) linear equations in \(n=2\) variables/ \\
+(\(\ast\)) has one solution (\(\frac{1}{2}, -\frac{1}{2}\)). The system is consitent.
+\\ \\
 
+b) (\(\ast\)) \begin{align*} 
+x+y&=1 \\
+2x+2y&=2 \\
+\end{align*}
+(\(\ast\)) is a system of \(m=2\) linear equations and \(n=2\) variables \\
+observe that \(2=2\) \\
+then (\(\ast\)) \(\Leftrightarrow\) \(x+y=1\) hence the solution is \\
+\begin{align*} 
+\left\{(x,y) | x+y=1 \right\} &= \left\{ (x,y) | y=1-x \right\} \\
+&= \left\{ (x,1-x) | x \in \mathbb{R} \right\}
+\end{align*}
+\\ \\
 
+c) (\(\ast\)) \begin{align*} 
+x+y&=-1 \quad &\boxed{1}\\
+x+y&=1 \quad &\boxed{2}\\
+\end{align*}
+\\
+Note that \(\boxed{1}\) and \(\boxed{2}\) imply that: \(1=-1\) which is impossible, then (\(\ast\)) has no solutions. The system is inconsistent.
+\\ \\
 
+\underline{Definition (system in a row-echelon form):}
+\\ 
 
+A system of linear equations is in row-echelon form when it has a stair-step pattern with leading coefficients of 1. To solve is we use a back substitution.
+\\
 
+\textbf{Example: Row-Echelon Form}
+\\
 
+(\(\ast\)) a) \begin{align*} 
+x-2y+3z&=9 \\
+y+3z &= 5 \\
+z&=2 \\
+\end{align*}
+(\(\ast\)) is in row-echelon form, it has a stair-step pattern and the leading coefficients are 1.
+\\ \\
 
+(\(\ast\)) b) \begin{align*} 
+x+2y &=1 \\
+3y &=5 \\
+\end{align*}
+(\(\ast\)) has a stair-step pattern, but the leading coefficient of the second row isn't 1. Therefore, (\(\ast\)) is not in row-echelon form.
+\\ \\
+
+(\(\ast\)) c) \begin{align*} 
+x-y+z&=1\\
+y-z&=0\\
+y+6z&=3\\
+\end{align*}
+The leading coefficients of (\(\ast\)) are 1. (\(\ast\)) does not have a stair-step pattern, therefore (\(\ast\)) is not in row-echelon form.
+\\ \\
+
+\underline{Definition (equivalence of systems of linear equations:)}
+\\
+
+Two systems of linear equations are \underline{equivalent} when they have the same solution set (the systems must have the same number of linear equations and the same variables).
+\\
+
+\textbf{Example:}
+\\
+
+(\(\ast\)) \begin{align*} 
+    2x+2y&=2 \\
+    x-y&=1 \\
+\end{align*}
+\(\Leftrightarrow\)\\
+\begin{align*} 
+x+y&=1 \\
+x-y&=1 \\
+\end{align*}
+\(\Leftrightarrow\) \\
+\begin{align*} 
+x&=1 \\
+y&=0 \\
+\end{align*}
+The solution set is \(\left\{(1,0)\right\}\) hence the systems \(\boxed{1}\), \(\boxed{2}\), and \(\boxed{3}\) are equivalent as they have the same solution set.
+\\
+
+Remark: To solve a system that is not in a row-echelon form we write it as an \underline{equivalent} \underline{system} in row-echelon form.
+\\
+
+Question: What are the possible operations that we can apply to the equations of a system (\(\ast\)) to obtain an equivalent system?
+\\
+Answer: The following are operations that we can apply to the equations in (\(\ast\)) to obtain an equivalent system:\\
+1) Interchanging the rows \\
+2) Multiplying an equation by a non-zero constant \\
+3) Adding a multiply of an equation to another equation
+\\
+
+ Remark: Rewriting a system of linear equations in a row-echelon form involves a chain of equivalent systems using operations 1), 2), and 3): the process is called a Gaussian Eelimination.
+ \\
+
+\textbf{Example:}
+\\
+
+(\(\ast\)) a) \begin{align*} 
+x-2y+3z&=9 \quad &\boxed{1}\\
+-x+3y&=-4 \quad &\boxed{2} \\
+2x-5y+5z&=17 \quad &\boxed{3} \\
+\end{align*}
+\\
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables
+\\
+
+To solve (\(\ast\)) we apply a Gaussian Elimination:
+\\
+
+(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
+x-2y+3z&=9 \quad &\boxed{1} \\
+-x+3y&=-4 \quad &\boxed{2} \\
+-y-z&=-1 \quad &(-2)\boxed{1} + \boxed{3} \rightarrow \boxed{3}'
+\end{align*}
+\\
+
+\(\Leftrightarrow\) \begin{align*} 
+x-2y+3z&=9 \quad &\boxed{1}\\
+y+3z&=5 \quad &\boxed{1} + \boxed{2} \rightarrow \boxed{2}'\\
+-y-z&=-1 \quad &\boxed{3}'
+\end{align*}
+\\
+
+\(\Leftrightarrow\) \begin{align*} 
+x-2y-3z&=9 \quad &\boxed{1}\\
+y+3z&=5 \quad &\boxed{2}\\
+2z&=4 \quad &\boxed{2}' + \boxed{3}' \rightarrow \boxed{3}''
+\end{align*}
+\\
+
+\(\Leftrightarrow\) \begin{align*} 
+    x-2y-3z&=9 \quad &\boxed{1}\\
+    y+3z&=5 \quad &\boxed{2}\\
+    z&=2 \quad &\nicefrac{1}{2}\boxed{3}'' \rightarrow \boxed{3}'''
+\end{align*}
+\\
+
+The system is in a row-echelon form, to solve it we use a back substitution, substitution \(z=2\) in \(\boxed{2}'\) yields:
+\\
+
+\(y+3(2)=5\)\\
+\(\Leftrightarrow\) \(y=-1\)\\
+substituting \(y=-1\) and \(z=2\) in \(\boxed{1}\) yields:
+\\
+\(x-2(-1)+3(2)=9\)
+\\
+\(\Leftrightarrow\) \(x+2+6=9\)
+\\
+\(\implies\) \(x+1\) \\
+
+The system is consistent, it has a unique solution and the solution set is \(\left\{(1,-1,2)\right\}\)
+\\ \\
+
+(\(\ast\)) b) \begin{align*} 
+x-3y+z&=1 \quad &\boxed{1}\\
+2x-y-2z&=2 \quad &\boxed{2}\\
+x+2y-3z&=-1 \quad &\boxed{3}
+\end{align*}
+\\
+
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables. We apply a Gaussian Elimination to the system:
+\\
+
+(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
+    x-3y+z&=1 \quad &\boxed{1}\\
+    2x-y-2z&=2 \quad &\boxed{2}\\
+    5y-4z&=-2 \quad &(-1)\boxed{1}+\boxed{3} \rightarrow \boxed{3}'
+\end{align*}
+\\
+
+\(\Leftrightarrow\) \begin{align*} 
+    x-3y+z&=1 \quad &\boxed{1}\\
+    5y-4z&=0 \quad &(-2)\boxed{1}+\boxed{2} \rightarrow \boxed{2}'\\
+    5y-4z&=-2 \quad &\boxed{3}'
+\end{align*}
+\\
+The system is inconsistent and has no solutions.
+\\ \\
+
+(\(\ast\)) c) \begin{align*} 
+y-z&=0 \quad &\boxed{1}\\
+x-3z&=-1 \quad &\boxed{2}\\
+-x+3y&=1 \quad &\boxed{3}
+\end{align*}
+\\
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables. We apply a Gaussian Elimination to the system:
+\\
+
+(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
+    x-3z&=-1 \quad &\boxed{2}\\
+    y-z&=0 \quad &\boxed{1}\\
+    -x+3y&=1 \quad &\boxed{3}
+\end{align*}
+\\
+
+(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
+    x-3z&=-1 \quad &\boxed{2}\\
+    y-z&=0 \quad &\boxed{1}\\
+    3y-3z&=0 \quad &\boxed{2} + \boxed{3} \rightarrow \boxed{3}'
+\end{align*}
+\\
+
+(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
+    x-3z&=-1 \quad &\boxed{2}\\
+    y-z&=0 \quad &\boxed{1}\\
+\end{align*}
+
+let \(z=t\), \(t \in \mathbb{R}\) is a parameter\\
+then \(\boxed{1} \implies y = t\)\\
+and \(\boxed{2} \implies x=-1+3z = -1 +3t\)\\
+then \begin{align*} 
+x&=-1+3t\\
+y&=t \quad , t \in \mathbb{R}\\
+z&=t
+\end{align*}
+\\
+
+Hence (\(\ast\)) is a consistent system, it has infinitely many solutions. The solution set (on a paramaterized form) is:
+\\
+
+\(\left\{(x,y,z) | x=-1+3t,y=t,z=t,t \in \mathbb{R} \right\}\)\\
+\(= \left\{(-1+3t,t,t) | t \in \mathbb{R} \right\}\)\\
+The represents a line in space
 
 \end{document}
