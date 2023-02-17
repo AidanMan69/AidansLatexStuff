@@ -16,12 +16,12 @@
 	// 	"description": "Log output to console"
 	// }
 
-"Two by Two Matrix": {
-	"prefix": "tom",
+"2x2 Matrix": {
+	"prefix": "tw",
 	"body": [
 	 	"\\begin{pmatrix} $1 & $2 \\\\\\ $3 & $4 \\end{pmatrix}",
 	 	],
-	"description": "Two by Two Matrix"
+	"description": "2x2 Matrix"
 },
 
 "Inline Math": {
@@ -60,21 +60,21 @@
 
 },
 
-"three by three matrix": {
-	"prefix": "tem",
+"3x3 matrix": {
+	"prefix": "th",
 	"body": [
 	 	"\\begin{pmatrix} $1 & $2 & $3 \\\\\\ $4 & $5 & $6 \\\\\\ $7 & $8 & $9 \\end{pmatrix}"
 	 	],
-	"description": "three by three matrix"
+	"description": "3x3 matrix"
 
 },
 
-"four by four matrix": {
-	"prefix": "fom",
+"4x4 matrix": {
+	"prefix": "fo",
 	"body": [
 	 	"\\begin{pmatrix} $1 & $2 & $3 & $4 \\\\\\ $5 & $6 & $7 & $8 \\\\\\ $9 & $10 & $11 & $12 \\\\\\ $13 & $14 & $15 & $16 \\end{pmatrix}"
 	 	],
-	"description": "three by three matrix"
+	"description": "4x4 matrix"
 
 },
 
@@ -206,6 +206,14 @@
 	 	"\\rightarrow"
 	 	],
 	"description": "right arrow"
+},
+
+"parenthesis asterisk": {
+	"prefix": "ast",
+	"body": [
+	 	"(\\(\\ast\\))"
+	 	],
+	"description": "parenthesis asterisk"
 },
 
 }
