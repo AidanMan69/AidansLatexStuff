@@ -28,7 +28,7 @@ here \(a_i\) is a constant for any \(1 \leq i \leq n\) and \(b\) is a constant
 \(x_1\) is the leading variable
 \\
 
-\textbf{Example: the following equations are linear}
+\textbf{Example: Linear Equations}
 \\
 a) \(2x-3y=1\) (2 variables) \\
 \(\rightarrow\) represents a line of the xy plane 
@@ -37,7 +37,7 @@ b) \(x+y-z=2\) (3 variables) \\
 \(\rightarrow\) represents a plane in the xyz coordinate system
 \\ \\
 
-\textbf{Example: the following equations are non-linear}
+\textbf{Example: Non-Linear Equations}
 \\
 1) \( \boxed{x^2} + y + z =0\) \(\leftarrow\) non-linear function \(x\)
 \\
@@ -74,25 +74,26 @@ let \(x_2=t\), here \(t \in \mathbb{R}\)
 
 Then the solution set of \(\boxed{1}\) is 
 \\
-\(\left\{(x_1 , x_2) | x_1 = \frac{1}{2} + \frac{3}{2}t \text{ and } x_2 = t \text{, } t \in \mathbb{R} \right\}\)
-\\
-\(\boxed{= \left\{\left(\frac{1}{2} + \frac{3}{2}t, t\right) | t \in \mathbb{R} \right\}}\) A paramaterization of the solution set
+\begin{align*} 
+    &\left\{(x_1 , x_2) | x_1 = \frac{1}{2} + \frac{3}{2}t \text{ and } x_2 = t \text{, } t \in \mathbb{R} \right\}\\
+    &\boxed{= \left\{\left(\frac{1}{2} + \frac{3}{2}t, t\right) | t \in \mathbb{R} \right\}} \text{ A paramaterization of the solution set}\end{align*}
 \\ \\
 
-b) \(\boxed{2}\) \(x_1 + 2x_2 - x_3 = 4\)
-\\
-Let \(x_3 = t\), \(t \in \mathbb{R}\) is a parameter
-\\
-Let \(x_2 = s\), \(s \in \mathbb{R}\) is a parameter
-\\
-
-then \(\boxed{2}\) \(x_1 + 2s - t = 4\) \\
-\(\Leftrightarrow x_2 = -2s + t + 4\), \(t \in \mathbb{R}\) and \(s \in \mathbb{R}\)
+b) \(\boxed{2}\) \(x_1 + 2x_2 - x_3 = 4\)\\ \\
+Let \(x_3=t, \, t \in \mathbb{R}\) is a parameter \\
+Let \(x_2 = s, \, s \in \mathbb{R}\) is a parameter
 \\ \\
-Then the solution set of \(\boxed{2}\) is \\
-\(\left\{(x_1, x_2, x_3) | x_1 = -2s + t + 4, x2 = s, x_3 = t, s \in \mathbb{R} \text{ and } t \in \mathbb{R} \right\}\)
-\\
-\(\boxed{= \left\{(-2s + t + 4, s, t) | s \in \mathbb{R} \text{ and } t \in \mathbb{R} \right\}}\)
+Then \\
+\begin{align*}  
+    &\Leftrightarrow x_2 + 2s - t = 4 \\
+    &\Leftrightarrow x_2 = -2s + t + 4, \, t \in \mathbb{R} \text{ and } s \in \mathbb{R}
+\end{align*}
+\\ \\
+Then the solution set of \(\boxed{2}\) is
+\begin{align*}
+&\left\{(x_1, x_2, x_3) | \, x_2 = -2s +t +4, \,x_2 =s, \,x_3 =t, \,s \in \mathbb{R} \text{ and } t \in \mathbb{R} \right\}\\
+&\boxed{= \left\{(-2s+t+4,\, s,\, t) | \,s \in \mathbb{R} \text{ and }t \in \mathbb{R} \right\}}
+\end{align*}
 \\ \\
 
 \underline{Definition (System of linear equations in \(n \geq 1\) variables):}
@@ -104,7 +105,7 @@ A system of \(m \geq 1\) linear equation in \(n \geq 1\) variables is a set of \
 (\(\ast\)) \begin{align*} 
 a_{11} x_1 + a_{12} x_2 + a_{13} x_3 + \ldots + a_{1n} x_n &= b_1\\
 a_{21} x_1 + a_{22} x_2 + a_{23} x_3 + \ldots + a_{2n} x_n &= b_2\\
-a_{31} x_1 + a_{32} x_2 + a_{33} x_3 + \ldots + a_{3n} x_n &= b_3\\
+a_{31} x_1 + a_{32} x_2 + a_{33} x_3 + \ldots + a_{3n} x_n = b_3\\
 \vdots\\
 a_{m1} x_1 + a_{m2} x_2 + a_{m3} x_3 + \ldots + a_{mn} x_n &= b_m
 \end{align*}
@@ -124,34 +125,38 @@ For a given system of linear equations (\(\ast\)) Precisely one of the following
 3) The system (\(\ast\)) has no solutions (system is inconsistent) \\
 \\
 
-a) (\(\ast\)) \begin{align*} 
-    x+y &= 0 \\
-    x-y &=1
+\textbf{Examples: Different Cases for Systems of Linear Equations}
+\\
+
+a) \begin{align*}
+    (\ast) \quad \begin{cases}
+        x+y=0 & \quad \textcircled{1} \\ x-y=1 & \quad \textcircled{2}
+    \end{cases}
 \end{align*}
 
-(\(\ast\)) is a system of \(m =2 \) linear equations in \(n=2\) variables/ \\
+(\(\ast\)) is a system of \(m =2 \) linear equations in \(n=2\) variables \\
 (\(\ast\)) has one solution (\(\frac{1}{2}, -\frac{1}{2}\)). The system is consitent.
 \\ \\
 
-b) (\(\ast\)) \begin{align*} 
-x+y&=1 \\
-2x+2y&=2 \\
+b)  \begin{align*} 
+    (\ast) \quad \begin{cases} 
+    x+y=1 & \quad \textcircled{1} \\ 2x+2y=2 & \quad \textcircled{2}  
+\end{cases}
 \end{align*}
+
 (\(\ast\)) is a system of \(m=2\) linear equations and \(n=2\) variables \\
 observe that \(2=2\) \\
-then (\(\ast\)) \(\Leftrightarrow\) \(x+y=1\) hence the solution is \\
+then (\(\ast\)) \(\Leftrightarrow\) \(x+y=1\) hence the solution is
 \begin{align*} 
-\left\{(x,y) | x+y=1 \right\} &= \left\{ (x,y) | y=1-x \right\} \\
-&= \left\{ (x,1-x) | x \in \mathbb{R} \right\}
+\left\{(x,y) \,|\, x+y=1 \right\} &= \left\{ (x,y) \, | \, y=1-x \right\} \\
+&= \left\{(x, \, 1-x) | \, x \in \mathbb{R} \right\}
 \end{align*}
 \\ \\
-
-c) (\(\ast\)) \begin{align*} 
-x+y&=-1 \quad &\boxed{1}\\
-x+y&=1 \quad &\boxed{2}\\
+c) \begin{align*} 
+(\ast) \quad \begin{cases} x+y=-1 & \quad \textcircled{1} \\ x+y=1 & \quad \textcircled{2} \end{cases}
 \end{align*}
 \\
-Note that \(\boxed{1}\) and \(\boxed{2}\) imply that: \(1=-1\) which is impossible, then (\(\ast\)) has no solutions. The system is inconsistent.
+Note that \(\textcircled{1}\) and \(\textcircled{2}\) imply that: \(1=-1\) which is impossible, then (\(\ast\)) has no solutions. The system is inconsistent.
 \\ \\
 
 \underline{Definition (system in a row-echelon form):}
@@ -160,29 +165,27 @@ Note that \(\boxed{1}\) and \(\boxed{2}\) imply that: \(1=-1\) which is impossib
 A system of linear equations is in row-echelon form when it has a stair-step pattern with leading coefficients of 1. To solve is we use a back substitution.
 \\
 
-\textbf{Example: Row-Echelon Form}
+\textbf{Examples: Row-Echelon Form}
 \\
 
-(\(\ast\)) a) \begin{align*} 
-x-2y+3z&=9 \\
-y+3z &= 5 \\
-z&=2 \\
+a) \begin{align*} 
+(\ast) \quad \begin{cases} x-2y+3z = 9 & \quad \textcircled{1} \\ y+3z=5 & \quad \textcircled{2} \\ z=2 & \quad \textcircled{3} \end{cases}
 \end{align*}
+\\
 (\(\ast\)) is in row-echelon form, it has a stair-step pattern and the leading coefficients are 1.
 \\ \\
 
-(\(\ast\)) b) \begin{align*} 
-x+2y &=1 \\
-3y &=5 \\
+b) \begin{align*} 
+(\ast) \quad \begin{cases} x+2y=1 & \quad \textcircled{1} \\ 3y=5 & \quad \textcircled{2} \end{cases}
 \end{align*}
+\\
 (\(\ast\)) has a stair-step pattern, but the leading coefficient of the second row isn't 1. Therefore, (\(\ast\)) is not in row-echelon form.
 \\ \\
 
-(\(\ast\)) c) \begin{align*} 
-x-y+z&=1\\
-y-z&=0\\
-y+6z&=3\\
+c) \begin{align*} 
+(\ast) \quad \begin{cases} x-y+z=1 & \quad \textcircled{1} \\ y-z=0 & \quad \textcircled{2} \\ y+6z=3 & \quad \textcircled{3} \end{cases}
 \end{align*}
+\\
 The leading coefficients of (\(\ast\)) are 1. (\(\ast\)) does not have a stair-step pattern, therefore (\(\ast\)) is not in row-echelon form.
 \\ \\
 
@@ -192,32 +195,23 @@ The leading coefficients of (\(\ast\)) are 1. (\(\ast\)) does not have a stair-s
 Two systems of linear equations are \underline{equivalent} when they have the same solution set (the systems must have the same number of linear equations and the same variables).
 \\
 
-\textbf{Example:}
+\textbf{Example: System Equivalency}
 \\
-
-(\(\ast\)) \begin{align*} 
-    2x+2y&=2 \\
-    x-y&=1 \\
-\end{align*}
-\(\Leftrightarrow\)\\
 \begin{align*} 
-x+y&=1 \\
-x-y&=1 \\
+&(\ast) \quad \boxed{\begin{cases} 2x+2y=2 \\ x-y=1 \end{cases}} \quad \textcircled{1}\\
+&\Leftrightarrow \quad \boxed{\begin{cases} x+y=1 \\ x-y=1 \end{cases}} \quad \textcircled{2}\\
+&\Leftrightarrow \quad \boxed{\begin{cases} x=1 \\ y=0 \end{cases}} \quad \textcircled{3}
 \end{align*}
-\(\Leftrightarrow\) \\
-\begin{align*} 
-x&=1 \\
-y&=0 \\
-\end{align*}
-The solution set is \(\left\{(1,0)\right\}\) hence the systems \(\boxed{1}\), \(\boxed{2}\), and \(\boxed{3}\) are equivalent as they have the same solution set.
+\\
+The solution set is \(\left\{(1,0)\right\}\) hence the systems \(\textcircled{1}\), \(\textcircled{2}\), and \(\textcircled{3}\) are equivalent as they have the same solution set.
 \\
 
 Remark: To solve a system that is not in a row-echelon form we write it as an \underline{equivalent} \underline{system} in row-echelon form.
 \\
 
-Question: What are the possible operations that we can apply to the equations of a system (\(\ast\)) to obtain an equivalent system?
+\textbf{Question}: What are the possible operations that we can apply to the equations of a system (\(\ast\)) to obtain an equivalent system?
 \\
-Answer: The following are operations that we can apply to the equations in (\(\ast\)) to obtain an equivalent system:\\
+\textbf{Answer}: The following are operations that we can apply to the equations in (\(\ast\)) to obtain an equivalent system:\\
 1) Interchanging the rows \\
 2) Multiplying an equation by a non-zero constant \\
 3) Adding a multiply of an equation to another equation
@@ -226,134 +220,100 @@ Answer: The following are operations that we can apply to the equations in (\(\a
  Remark: Rewriting a system of linear equations in a row-echelon form involves a chain of equivalent systems using operations 1), 2), and 3): the process is called a Gaussian Eelimination.
  \\
 
-\textbf{Example:}
+\textbf{Examples: Gaussian Elimination}
 \\
 
-(\(\ast\)) a) \begin{align*} 
-x-2y+3z&=9 \quad &\boxed{1}\\
--x+3y&=-4 \quad &\boxed{2} \\
-2x-5y+5z&=17 \quad &\boxed{3} \\
+a) \begin{align*} 
+(\ast) \quad \begin{cases} x-2y+3z=9 & \quad \textcircled{1} \\ -x+3y=-4 & \quad \textcircled{2} \\ 2x-5y+5z=17 & \quad \textcircled{3} \end{cases}
 \end{align*}
 \\
-(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables.
 \\
-
 To solve (\(\ast\)) we apply a Gaussian Elimination:
 \\
 
-(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
-x-2y+3z&=9 \quad &\boxed{1} \\
--x+3y&=-4 \quad &\boxed{2} \\
--y-z&=-1 \quad &(-2)\boxed{1} + \boxed{3} \rightarrow \boxed{3}'
+\begin{align*} 
+(\ast) \, &\Leftrightarrow \quad \begin{cases} x-2y+3z=9 & \quad \textcircled{1} \\ -x+3y=-4 & \quad \textcircled{2} \\ -y-z=-1 & \quad (-2)\textcircled{1} + \textcircled{3} \rightarrow \textcircled{3}' \end{cases}
+\\ \\
+&\Leftrightarrow \quad \begin{cases} x-2y+3z=9 & \quad \textcircled{1} \\ y=3z=5 & \quad \textcircled{1} + \textcircled{2} \rightarrow \textcircled{2}' \\ -y-z=-1 & \quad \textcircled{3}' \end{cases}
+\\ \\
+&\Leftrightarrow \quad \begin{cases} x-2y-3z=9 & \quad \textcircled{1} \\ y+3z=5 & \quad \textcircled{2}' \\ 2z=4 & \quad \textcircled{2}' + \textcircled{3}' \rightarrow \textcircled{3}''\end{cases}
+\\ \\
+&\Leftrightarrow \quad \begin{cases} x-2y-3z=9 & \quad \textcircled{1} \\ y+3z=5 & \quad \textcircled{2}' \\ \boxed{z=2} & \quad \frac{1}{2}\textcircled{3}'' \rightarrow \textcircled{3}''' \end{cases}
 \end{align*}
 \\
 
-\(\Leftrightarrow\) \begin{align*} 
-x-2y+3z&=9 \quad &\boxed{1}\\
-y+3z&=5 \quad &\boxed{1} + \boxed{2} \rightarrow \boxed{2}'\\
--y-z&=-1 \quad &\boxed{3}'
+The system is in a row-echelon form, to solve it we use a back substitution, substitution \(z=2\) in \(\textcircled{2}'\) yields:
+\\
+
+\begin{align*} 
+y+3(2)=5\\
+\Leftrightarrow \boxed{y=-1}
 \end{align*}
 \\
 
-\(\Leftrightarrow\) \begin{align*} 
-x-2y-3z&=9 \quad &\boxed{1}\\
-y+3z&=5 \quad &\boxed{2}\\
-2z&=4 \quad &\boxed{2}' + \boxed{3}' \rightarrow \boxed{3}''
+substituting \(y=-1\) and \(z=2\) in \(\textcircled{1}\) yields:
+\\
+
+\begin{align*} 
+x-2(-1)+3(2)=9\\
+\Leftrightarrow x+2+6=9\\
+\implies \boxed{x=1}
 \end{align*}
 \\
-
-\(\Leftrightarrow\) \begin{align*} 
-    x-2y-3z&=9 \quad &\boxed{1}\\
-    y+3z&=5 \quad &\boxed{2}\\
-    z&=2 \quad &\nicefrac{1}{2}\boxed{3}'' \rightarrow \boxed{3}'''
-\end{align*}
-\\
-
-The system is in a row-echelon form, to solve it we use a back substitution, substitution \(z=2\) in \(\boxed{2}'\) yields:
-\\
-
-\(y+3(2)=5\)\\
-\(\Leftrightarrow\) \(y=-1\)\\
-substituting \(y=-1\) and \(z=2\) in \(\boxed{1}\) yields:
-\\
-\(x-2(-1)+3(2)=9\)
-\\
-\(\Leftrightarrow\) \(x+2+6=9\)
-\\
-\(\implies\) \(x+1\) \\
-
 The system is consistent, it has a unique solution and the solution set is \(\left\{(1,-1,2)\right\}\)
 \\ \\
 
-(\(\ast\)) b) \begin{align*} 
-x-3y+z&=1 \quad &\boxed{1}\\
-2x-y-2z&=2 \quad &\boxed{2}\\
-x+2y-3z&=-1 \quad &\boxed{3}
+b) \begin{align*} 
+(\ast) \quad \begin{cases} x-3y+z=1 & \quad \textcircled{1} \\ 2x-y-2z=2 & \quad \textcircled{2} \\ x+2y-3z=-1 & \quad \textcircled{3} \end{cases}
 \end{align*}
 \\
-
-(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables. We apply a Gaussian Elimination to the system:
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables. 
+\\
+To solve (\(\ast\)) we apply a Gaussian Elimination:
 \\
 
-(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
-    x-3y+z&=1 \quad &\boxed{1}\\
-    2x-y-2z&=2 \quad &\boxed{2}\\
-    5y-4z&=-2 \quad &(-1)\boxed{1}+\boxed{3} \rightarrow \boxed{3}'
+\begin{align*} 
+(\ast) \, &\Leftrightarrow \quad \begin{cases} x-3y+z=1 & \quad \textcircled{1}\\2x-y-2z=2 & \quad \textcircled{2} \\ 5y-4z=-2 & \quad (-1)\textcircled{1}+\textcircled{3} \rightarrow \textcircled{3}'  \end{cases}
+\\ \\ 
+&\Leftrightarrow \quad \begin{cases} x-3y+z=1 & \quad \textcircled{1} \\ 5y-4z=0 & \quad (-2)\textcircled{1}+\textcircled{2} \rightarrow \textcircled{2}' \\ 5y-4z=-2 & \quad \textcircled{3}' \end{cases}
 \end{align*}
 \\
-
-\(\Leftrightarrow\) \begin{align*} 
-    x-3y+z&=1 \quad &\boxed{1}\\
-    5y-4z&=0 \quad &(-2)\boxed{1}+\boxed{2} \rightarrow \boxed{2}'\\
-    5y-4z&=-2 \quad &\boxed{3}'
-\end{align*}
-\\
-The system is inconsistent and has no solutions.
+The system is inconsistent and has no solutions because of the equations \(5y-4z=0\) and \(5y-4z=-2\). They are the same but equal different values.
 \\ \\
 
-(\(\ast\)) c) \begin{align*} 
-y-z&=0 \quad &\boxed{1}\\
-x-3z&=-1 \quad &\boxed{2}\\
--x+3y&=1 \quad &\boxed{3}
+c) \begin{align*} 
+(\ast) \quad \begin{cases} y-z=0 & \quad \textcircled{1} \\ x-3z=-1 & \quad \textcircled{2} \\ -x+3y=1 & \quad \textcircled{3} \end{cases}
 \end{align*}
 \\
-(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables. We apply a Gaussian Elimination to the system:
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables. 
+\\
+To solve (\(\ast\)) we apply a Gaussian Elimination:
 \\
 
-(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
-    x-3z&=-1 \quad &\boxed{2}\\
-    y-z&=0 \quad &\boxed{1}\\
-    -x+3y&=1 \quad &\boxed{3}
+\begin{align*} 
+(\ast)\,&\Leftrightarrow \quad \begin{cases} x-3z=-1 & \quad \textcircled{2} \\ y-z=0 & \quad \textcircled{1} \\ -x+3y=1 & \quad \textcircled{3} \end{cases}
+\\ \\
+&\Leftrightarrow \quad \begin{cases} x-3z=-1 & \quad \textcircled{2} \\ y-z=0 & \quad \textcircled{1} \\ 3y-3z=0 & \quad \textcircled{2}+\textcircled{3} \rightarrow \textcircled{3}' \end{cases}
+\\ \\
+&\Leftrightarrow \quad \begin{cases} x-3z=-1 & \quad \textcircled{2} \\ y-z=0 & \quad \textcircled{1} \end{cases}
 \end{align*}
 \\
-
-(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
-    x-3z&=-1 \quad &\boxed{2}\\
-    y-z&=0 \quad &\boxed{1}\\
-    3y-3z&=0 \quad &\boxed{2} + \boxed{3} \rightarrow \boxed{3}'
-\end{align*}
-\\
-
-(\(\ast\)) \(\Leftrightarrow\) \begin{align*} 
-    x-3z&=-1 \quad &\boxed{2}\\
-    y-z&=0 \quad &\boxed{1}\\
-\end{align*}
-
-let \(z=t\), \(t \in \mathbb{R}\) is a parameter\\
-then \(\boxed{1} \implies y = t\)\\
-and \(\boxed{2} \implies x=-1+3z = -1 +3t\)\\
+Let \(z=t\)\\
+\(\textcircled{1} \implies y = t\)\\
+\(\textcircled{2} \implies x=-1 +3t\)\\
 then \begin{align*} 
-x&=-1+3t\\
-y&=t \quad , t \in \mathbb{R}\\
-z&=t
+\begin{cases} x=-1+3t \\ y=t \\ z=t \end{cases} \text{, }\, t \in \mathbb{R} 
 \end{align*}
 \\
-
 Hence (\(\ast\)) is a consistent system, it has infinitely many solutions. The solution set (on a paramaterized form) is:
 \\
-
-\(\left\{(x,y,z) | x=-1+3t,y=t,z=t,t \in \mathbb{R} \right\}\)\\
-\(= \left\{(-1+3t,t,t) | t \in \mathbb{R} \right\}\)\\
-The represents a line in space
+\begin{align*} 
+    &\left\{(x,\,y,\,z) |\, x=-1+3t,\,y=t,\,z=t,\,t \in \mathbb{R}\right\}\\
+    &=\left\{(-1+3t,\,t,\,t) |\,t \in \mathbb{R}  \right\}
+\end{align*}
+\\
+This represents a line in space.
+\\ \\
 
 \end{document}
