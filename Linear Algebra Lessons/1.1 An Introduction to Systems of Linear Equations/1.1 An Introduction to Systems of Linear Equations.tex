@@ -136,7 +136,7 @@ a) \begin{align*}
 \end{align*}
 
 (\(\ast\)) is a system of \(m =2 \) linear equations in \(n=2\) variables \\
-(\(\ast\)) has one solution (\(\frac{1}{2}, -\frac{1}{2}\)). The system is consitent.
+(\(\ast\)) has one solution (\(\frac{1}{2}, -\frac{1}{2}\)) and the system is consistent
 \\ \\
 
 b)  \begin{align*} 
@@ -146,7 +146,7 @@ b)  \begin{align*}
 \end{align*}
 
 (\(\ast\)) is a system of \(m=2\) linear equations and \(n=2\) variables \\
-observe that \(2=2\) \\
+Note that \(\textcircled{1}\) and \(\textcircled{2}\) imply that: 2=2 which implies that (\(\ast\)) has infinite solutions.\\
 then (\(\ast\)) \(\Leftrightarrow\) \(x+y=1\) hence the solution is
 \begin{align*} 
 \left\{(x,y) \,|\, x+y=1 \right\} &= \left\{ (x,y) \, | \, y=1-x \right\} \\
@@ -157,6 +157,7 @@ c) \begin{align*}
 (\ast) \quad \begin{cases} x+y=-1 & \quad \textcircled{1} \\ x+y=1 & \quad \textcircled{2} \end{cases}
 \end{align*}
 \\
+(\(\ast\)) is a system of \(m=2\) linear equations and \(n=2\) variables\\
 Note that \(\textcircled{1}\) and \(\textcircled{2}\) imply that: \(1=-1\) which is impossible, then (\(\ast\)) has no solutions. The system is inconsistent.
 \\ \\
 
@@ -218,7 +219,7 @@ Remark: To solve a system that is not in a row-echelon form we write it as an \u
 3) Adding a multiply of an equation to another equation
 \\
 
- Remark: Rewriting a system of linear equations in a row-echelon form involves a chain of equivalent systems using operations 1), 2), and 3): the process is called a Gaussian Eelimination.
+ Remark: Rewriting a system of linear equations in a row-echelon form involves a chain of equivalent systems using operations 1), 2), and 3): the process is called a Gaussian Elimination.
  \\
 
 \textbf{Examples: Gaussian Elimination}
@@ -244,7 +245,7 @@ To solve (\(\ast\)) we apply a Gaussian Elimination:
 \end{align*}
 \\
 
-The system is in a row-echelon form, to solve it we use a back substitution, substitution \(\boxed{z=2}\) in \(\textcircled{2}'\) yields:
+The system is in a row-echelon form, to solve it we use a back substitution, substite \(\boxed{z=2}\) in \(\textcircled{2}'\) yields:
 \\
 
 \begin{align*} 
@@ -280,7 +281,7 @@ To solve (\(\ast\)) we apply a Gaussian Elimination:
 &\Leftrightarrow \quad \systeme{x-3y+z=1, 5y-4z=0, 5y-4z=-2} \quad \quad \begin{aligned} &\textcircled{1} \\ &(-2)\textcircled{1}+\textcircled{2} \rightarrow \textcircled{2}' \\ &\textcircled{3}''\end{aligned}
 \end{align*}
 \\
-The system is inconsistent and has no solutions because of the equations \(5y-4z=0\) and \(5y-4z=-2\). They are the same but equal different values.
+The system is inconsistent and has no solutions because of the equations the bottom two equations \(5y-4z=0\) and \(5y-4z=-2\) imply that \(0=-2\), which is impossible.
 \\ \\
 
 c) \begin{align*} 
