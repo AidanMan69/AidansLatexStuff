@@ -135,6 +135,15 @@
 	"description": "centered math"
 },
 
+"aligned": {
+	"prefix": "ali",
+	"body": [
+	 	"\\begin{aligned} $1 \\end{aligned}"
+	 	],
+	"description": "aligned"
+},
+
+
 "integral": {
 	"prefix": "int",
 	"body": [
@@ -215,5 +224,71 @@
 	 	],
 	"description": "parenthesis asterisk"
 },
+
+"space": {
+	"prefix": "spa",
+	"body": [
+	 	"\\,"
+	 	],
+	"description": "space"
+},
+
+"&": {
+	"prefix": "an",
+	"body": [
+	 	"&"
+	 	],
+	"description": "&"
+},
+
+"&=": {
+	"prefix": "ane",
+	"body": [
+	 	"&="
+	 	],
+	"description": "&="
+},
+
+"cases curly brackets": {
+	"prefix": "cb",
+	"body": [
+	 	"\\begin{cases} $1 \\\\\\ $2 \\end{cases}"
+	 	],
+	"description": "cases curly brackets"
+},
+
+"quad": {
+	"prefix": "qu",
+	"body": [
+	 	"\\quad"
+	 	],
+	"description": "quad"
+},
+
+"text circle": {
+	"prefix": "cir",
+	"body": [
+	 	"\\textcircled{$1}"
+	 	],
+	"description": "text circle"
+},
+
+"cases curly brackets aligned": {
+	"prefix": "cba",
+	"body": [
+	 	"\\systeme{$1}"
+	 	],
+	"description": "cases curly brackets aligned"
+},
+
+"cases curly brackets aligned and numbered": {
+	"prefix": "cbn",
+	"body": [
+	 	"\\systeme{$1} \\quad \\quad \\begin{aligned} &\\textcircled{1} \\\\\\ &\\textcircled{2} \\\\\\ &\\textcircled{3} \\end{aligned}"
+	 	],
+	"description": "text circle"
+},
+
+
 
 }
