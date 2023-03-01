@@ -1,0 +1,154 @@
+\documentclass{jhwhw}
+\author{Aidan Garcia}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{spalign}
+\usepackage{nicefrac}
+\usepackage{tabto}
+\usepackage{parskip}
+\usepackage{systeme}
+\title{1.1: An Introduction to Systems of Linear Equations}
+
+\begin{document}
+
+\underline{Definition (Matrix)} \\
+If m and n are positive integrers than an \(m*n\) matrix is a rectangular array of the form:\\
+
+\begin{align*} 
+a_{11}\, a_{12}\, a_{13} \, &\ldots \, a_{1n}\\
+a_{21} \, a_{21} \, a_{23} \, &\ldots \, a_{2n}\\
+a_{31} \, a_{32} \, a_{33} \, &\ldots \, a_{3n}\\
+\vdots\\
+a_{m1} \, a_{m2} \, a_{m3} \, &\ldots \, a_{mn}\\
+\end{align*}
+
+There are n columns\\
+There are m rows\\
+
+Notice that each entry {number inside the array} of the following form: \(a_{ij}\) for \(1 \leq i \leq m\), \(1 \leq j \leq n\)\\
+
+A matrix with \(mat \geq 1\) cluns is said to be a matrix of size: \(m*n\)\\
+
+When \(m=n\) a matrix has the same number of rows and columns. We call it a \underline{square} matrix. It is said to have size \(n*n\) (\(n \geq 1\)) or order \(n\), \(n \geq 1\)\\
+
+If a given matrix is \underline{square} of size \(n*n\), \(n \geq 1\), then the entries \(a_{11}, \, a_{22}, \, a_{33}, \ldots \, a_{nn}\) are called the main diagonal entries.\\
+
+Note: Notice that a typical diagonal entry is of the form \(a_{ii}\), \(1 \leq i \leq n\)\\
+
+Example:
+\\
+
+Conider matrix \(A = \begin{pmatrix} -2 & 1 & 0 \\ 4 & -1 & 3 \\ 7 & 2 & 6 \end{pmatrix}\)\\
+
+Note that \(A\) is a square matrix of size \(3*3\). The diagonal entries are: \(a_{11}=-2, \, a_{22}=-1, \, a_{33}=6\)\\
+
+\underline{Definition Augmented matrix and coefficient matrix:}\\
+
+Given a system of m linear equations in n variables, then the matrix derived from the coefficients and the constant terms of the system is called: \underline{the augmented matrix of the system}\\
+
+Example:
+\\
+
+\((\ast) \systeme{2x+y=3, -x+y=1}\)\\
+(\(\ast\)) is a system of \(n=2\) linear equations in \(n=2\) variables.\\
+The corresponding augmented matrix is:\\
+
+\(\begin{pmatrix} 2 & 1 & 3 \\ -1 & 1 & 1 \end{pmatrix}\)\\
+
+The corresponding coefficient matrix is:
+
+\(\begin{pmatrix} 2 & 1 \\ -1 & 1 \end{pmatrix}\)\\
+
+Recall: (Elementary row operations)\\
+1) Interchanging two rows\\
+2) Multiply one row by a non-zero constant\\
+3) Adding a multiple of one row to another row\\
+
+\underline{Row-echelon form and reduced row-echolon form}\\
+
+\underline{form:}\\
+A matrix in a row-echelon form has the following properties:\\
+
+1) Any row consisting of zeros occur at the bottom of the matrix\\
+
+2) For each row that does \underline{not} consist entierely of zeros, the first non-zero entry is 1\\
+
+3) For two successive (non-zero) rows, the leading 1 in the higher row is farther to the left than the leading 1 in the lower row.\\
+
+example:
+\begin{align*} 
+\begin{pmatrix} 1 & -2 & 3 & 1 \\ 0 & 1 & 4 & 2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{pmatrix}\\
+\end{align*}
+
+A matrix in a row-echelon form, but not in a reduced row-echelon form\\
+
+4) A matrix is in a reduced row-echelon form when every column that has a leading 1, it has zeros in every position above and below its leading 1.\\
+
+\begin{align*} 
+\begin{pmatrix} 1 & 0 & 0 & -1 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{pmatrix}\\
+\end{align*}
+
+The matrix is in a reduced and row-echelon form, this implies that it is in a row-echelon form\\
+
+Remark: To solve a system of linear equations, we can use a \underline{Gaussian Elimination} with back substitution:\\
+
+1) write the augmented matrix of the system\\
+2) use elementary row operations to write the matrix in a row-echelon form:\\
+3) write the system of linear equations corresponding to the matrix obtained in step 2)\\
+4) Use a back substituion to solve the system\\
+
+Example: Solve the given system using a Gaussian Elimination:
+\\
+\begin{align*} (\ast) \quad \systeme{x-2y+3z=9, -x+3y=-4, 2x-5y+5z=17} \end{align*}\\
+
+Answer: (\(\ast\)) is a system if \(m=3\) linear equations in \(n-3\) variables\\
+
+The corresponding augmented matrix to (\(\ast\)) is:\\
+
+\begin{align*} \ast \begin{pmatrix} 1 & -2 & 3 & 9 \\ -1 & 3 & 0 & -4 \\ 2 & -5 & 5 & 17 \end{pmatrix} & R_1 \\ R_2 \\  R_3 \end{align*}\\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 &-2 & 3 & 9 \\ -1 & 3 & 0 & -4 \\ 0 & -1 & -1 & -1\end{pmatrix} \end{align*}\\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 &-2 & 3 & 9 \\ 0 & 1 & 3 & 5 \\ 0 & -1 & -1 & -1\end{pmatrix} \end{align*}
+\\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 &-2 & 3 & 9 \\ 0 & 1 & 3 & 5 \\ 0 & 0 & 2 & 4 \end{pmatrix} \end{align*} \\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 &-2 & 3 & 9 \\ 0 & 1 & 3 & 5 \\ 0 & 0 & 1 & 2 \end{pmatrix} \end{align*} \\
+
+The matrix is on a row-echelon form\\
+The corresponding system is:\\
+
+\begin{align*} \systeme{x-2y+3z=9,y+3z=5,z=2} \end{align*}\\
+
+We use a back substitution\\
+
+\(\textcircled{2} \rightarrow y=5-3z=5-3(2) = 5-6 = -1\)\\
+\(\textcircled{3} \rightarrow x=2y-3z-9 = 2(-1)-3(2)-9=1\)\\
+
+The system is consistent, it has a unique solution and the solution set is \(\left\{ (1,-1,2) \right\}\)\\
+
+Remark: A Gauss-Jordan Elimination involves writing the matrix associated to the system in a \underline{reduced} row-echelon form:\\
+
+After applying elementary row-operation we showed that the augmented matrix to system (\(\ast\)) can be written in a row-echelon form\\
+
+\begin{align*} 2 \ast \begin{pmatrix} 1 & -2 & 3 & 9 \\ 0 & 1 & 3 & 5 \\ 0 & 0 & 1 & 2 \end{pmatrix}\end{align*}\\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 & 0 & 9 & 19 \\ 0 & 1 & 3 & 5 \\ 0 & 0 & 1 & 2 \end{pmatrix} \end{align*}\\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 & 0 & 9 & 19 \\ 0 & 1 & 0 & -1 \\ 0 & 0 & 1 & 2 \end{pmatrix} \end{align*}\\
+
+\begin{align*} \Leftrightarrow \quad \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & -1 \\ 0 & 0 & 1 & 2 \end{pmatrix} \end{align*}\\
+
+Then \(x=1, \, y=-2, \, z=2\)\\
+The system is consisten and has a unique solution set \(\left\{(1,-1,2)\right\}\)\\
+
+Example: Solve the system using gauss-elimination
+
+
+
+\end{document}
