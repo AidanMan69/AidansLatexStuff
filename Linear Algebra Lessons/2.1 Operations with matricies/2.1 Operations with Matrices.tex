@@ -1,0 +1,230 @@
+\documentclass{jhwhw}
+\author{Aidan Garcia}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{spalign}
+\usepackage{nicefrac}
+\usepackage{tabto}
+\usepackage{parskip}
+\usepackage{systeme}
+\title{2.1: Operations with Matrices}
+
+\begin{document}
+To represent a matrix, we use one of these conventions:\\
+1) an uppercase latter: A, B, C, D...\\
+2) A representative element \([a_{ij}], [b_{ij}], [c_{ij}]\)\\ \\
+3) A rectangular array: \(\begin{bmatrix} a_{11} & a_{12} & a_{13} & \ldots & a_{1n} \\ a_{21} & a_{22} & a_{32} & \ldots & a_{2n} \\ a_{31} & a_{32} & a_{33} & \ldots & a_{3n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & a_{m3} & \ldots & a_{mn} \end{bmatrix}\)\\
+
+Remark:\\
+1) The matrices that we will consider have real valued entries: \(a_{ij} \in \mathbb{R} \\ \text{ for } 1 \leq i \leq m, \, 1 \leq j \leq n\)\\
+2) Matrices, depending on the applications, can have complex-valued entries \(a_{ij} \in \mathbb{C}\)
+\\ \\
+
+\underline{Definition: Equality of Matrices}\\
+Two matricies \(A = [b_{ij}]\) and \(B = [b_{ij}]\) are equal \(\iff\)\\
+1) \(A\) and \(B\) have the same size\\
+2) \(a_{ij} = b_{ij} \text{ for any } 1 \leq i \leq m, \, 1 \leq j \leq n\)
+\\ \\
+
+Example:
+\\
+
+\(A = \begin{bmatrix} -1 & 2 \\ 0 & 3 \end{bmatrix}\), \(\begin{bmatrix} 1 & 4 \\ -1 & 2 \\ 3 & 5 \end{bmatrix} = B\)\\
+
+\(A\) and \(B\) have different sizes, hence are \underline{not} equal\\
+
+\underline{Definitions: Row Matrix, Column Matrix}\\
+A matrix that has one column is called a column matrix (or a column vector)\\
+
+Example (Column Matrix):\\
+
+\(A = \begin{bmatrix} 2 \\ -1 \\ 3\end{bmatrix}\)
+\\
+
+A matrix that has one row is called a row matrix (or a row vector)\\
+
+Example (Row Matrix):\\
+
+\(B = \begin{bmatrix}  4 & 1 & 3 & 0 \end{bmatrix}\)
+\\ \\
+
+\underline{Definition: Matrix Addition}\\
+If \(A = [a_{ij}]\) and \(B = [b_{ij}]\) are matricies of sized \(m*n\), then \underline{their sum} is the \(m*n\) matrix.\\
+
+\(A+B = [a_{ij} + b_{ij}] \text{ for } 1 \leq i \leq m, \, 1 \leq j \leq n\)\\
+
+Remark: The sim of two matrices of different sizes is undefined
+\\
+
+Example:
+\\
+a) Let \(A = \begin{bmatrix} -1 & 2 & 4 \\ 0 & 3 & -6 \end{bmatrix}\)\\ \\
+and \(B = \begin{bmatrix} 0 & -2 & -4 \\ 1 & 0 & -1 \end{bmatrix}\)\\ \\
+Since \(A\) and \(B\) have equal size, then their sum is the \(2*3\) matrix\\ \\
+\begin{align*} A + B &= \begin{bmatrix} -1 & 2 & 4 \\ 0 & 3 & -6 \end{bmatrix} + \begin{bmatrix} 0 & -2 & -4 \\ 1 & 0 & -1 \end{bmatrix}\\ \\
+&= \begin{bmatrix} -1 + 0 & 2+(-2) & 4+4 \\ 0+1 & 3+0 & -6+(-1) \end{bmatrix}\\ \\
+&= \begin{bmatrix} -1 & 0 & 8 \\ 1 & 3 & -7 \end{bmatrix}
+\end{align*}
+\\
+
+b) Let \(A = \begin{bmatrix}  0 & -1 & 2  \\ 1 & 0 & 4 \\ -1 & 2 & 5 \end{bmatrix}\) \\ \\
+and \(B = \begin{bmatrix}  -1 & 0 \\  2 & 1 \\ 3 & 4 \end{bmatrix}\)\\
+
+\(\rightarrow\) the matrices have different sizes hence their sum is undefined\\
+
+Example:\\
+Consider the matrices \(A\) and \(B\) given in part a) on the previous examles, then it is easy to verify that: \(A+B = B+A = \begin{bmatrix} -1 & 0 & 8 \\  1 & 3 & -7 \end{bmatrix}\)\\
+
+\(\rightarrow\) In general, if \(A\) and \(B\) are matricies of size \(m*n\), then \(A+B=B+A\), hence the oeration of matrix addition is commutative.\\ \\
+
+\underline{Definition: Matrix Scalar Multilication}\\
+If \(A = [a_{ij}]\) is a matrix of size \(m*n\) and \(c \in \mathbb{R}\) is a scalar, then that scalar multiple of \(A\) is the \(m*n\) matrix\\
+
+\(cA = c[a_{ij}] = [c a_{ij}] \text{ for } 1 \leq i \leq m, \, 1 \leq j \leq n\)
+\\
+
+Example:
+\\
+Let \(A = \begin{bmatrix} -1 & 3 & 0 \\ 0 & 1 & 1 \\ 2 & 4 & 0 \end{bmatrix}\) and \(B = \begin{bmatrix} 0 & -4 & 1 \\ 4 & -2 & 0 \\ 1 & 1 & 3 \end{bmatrix}\)\\
+then\\
+
+\begin{align*} -2A + 3B &= -2 \begin{bmatrix} -1 & 3 & 0 \\ 0 & 1 & 1 \\ 2 & 4 & 0 \end{bmatrix} + 3 \begin{bmatrix} 0 & -4 & 1 \\ 4 & -2 & 0 \\ 1 & 1 & 3 \end{bmatrix}\\ \\
+&= \begin{bmatrix} 2 & -6 & 0 \\ 0 & -2 & -2 \\ -4 & -8 & 0 \end{bmatrix} + \begin{bmatrix}  0 & -12 & 3 \\ 12 & -6 & 0 \\ 3 & 3 & 9 \end{bmatrix}\\ \\
+&= \begin{bmatrix} 2 & -18 & 3 \\ 12 & -8 & -2 \\ -1 & -5 & 9 \end{bmatrix}
+\end{align*}
+\\ \\
+
+\underline{Definition: Matrix Multiplication}\\
+If \(A = [a_{ij}]\) is an \(m*n\) matrix\\
+and \(B = [b_{ij}]\) is an \(n*p\) matrix\\
+
+Then their product is the matrix \(AB\) of size \(m*p\)\\
+here \(AB = [C_{ij}]\), where\\
+\begin{align*} c_{ij} &= \sum_{k=1}^{n} a_{ik} b_{kj} \\
+&= a_{i1}b_{1j} + a_{i2}b_{2j} + a_{i3}b_{3j} + \ldots + a_{in}b_{nj}
+\end{align*}
+\\
+here \(1 \leq i \leq m, \, 1 \leq j \leq p\)\\
+
+Remark: On multilying a row by a column\\
+
+\(\begin{bmatrix} x & y & z \end{bmatrix} \begin{bmatrix} a \\ b \\ c \end{bmatrix} = \begin{bmatrix} xa & yb & zc \end{bmatrix}\)\\
+
+Example:\\
+
+Let \(A = \begin{bmatrix}  1 & 0 \\  -2 & 4 \\ 3 & 5 \end{bmatrix}\)\\
+and \(B = \begin{bmatrix} -2 & 3 \\ -4 & 1 \end{bmatrix}\)\\
+then \\
+
+\begin{align*} AB &= \begin{bmatrix}  1 & 0 \\  -2 & 4 \\ 3 & 5 \end{bmatrix} \begin{bmatrix} -2 & 3 \\ -4 & 1 \end{bmatrix} \\ \\
+&= \begin{bmatrix} 1(-2)+0(-4) & 1(3)+0(1) \\ -2(-2)+4(-4) & -2(3)+4(1) \\ 3(-2)+5(-4) & 3(3)+5(1) \end{bmatrix}\\ \\
+&= \begin{bmatrix} -2 & 3 \\ -12 & -2 \\ -26 & 14 \end{bmatrix}
+\end{align*}
+\\
+
+In general, matrix multiplication is \underline{not} commutative, that is \(AB \neq BA\)\\ \\
+
+Remark: System of linear equation and matrices\\
+A system (\(\ast\)) of \(m\) linear equations in \(n\) variables can be reresented by matrix multiplication as follows:\\
+
+\begin{align*} \begin{bmatrix} a_{11} & a_{12} & a_{13} & \ldots & a_{1n} \\ a_{21} & a_{22} & a_{32} & \ldots & a_{2n} \\ a_{31} & a_{32} & a_{33} & \ldots & a_{3n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & a_{m3} & \ldots & a_{mn} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \vdots \\ x_n \end{bmatrix} &= \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ \vdots \\ b_m \end{bmatrix} \\ \\ 
+&\Leftrightarrow \, Ax = b
+\end{align*}
+\\
+hence (\(\ast\)) \(\Leftrightarrow Ax = b\)\\
+
+Example:\\
+Consider the system
+\begin{align*} (\ast) \quad \systeme{x-2y+3z=1,-x+4y+z=4, 2x-y=3} \end{align*}\\
+(\(\ast\)) is a system of \(m=3\) linear equations in \(n=3\) variables\\ \\
+Notice that (\(\ast\)) \(\Leftrightarrow \begin{bmatrix} 1 & -2 & 3 \\ -1 & 4 & 1 \\ 2 & -1 & 0 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix}\)\\
+
+Example:\\ \\
+Let \(A = \begin{bmatrix} 1 & -2 & 1 \\ 2 & 3 & -1 \end{bmatrix}\)\\ \\
+
+and \(x = \begin{bmatrix}  x_1 \\ x_2 \\ x_3 \end{bmatrix}\)\\ \\
+
+and \(b = \begin{bmatrix} 0 \\ 0 \end{bmatrix} = 0\)
+\\
+
+Solve the matrix equation: \(Ax = b\)\\
+
+We have \(Ax = b\)
+\begin{align*} &\Leftrightarrow \begin{bmatrix} 1 & -2 & 1 \\  2 & 3 & -1 \end{bmatrix}\begin{bmatrix}  x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}\\ \\
+&\Leftrightarrow \begin{bmatrix} x_1 - 2x_2 + x_3 \\ 2x_1 +3x_2 - x_3 \end{bmatrix} \begin{bmatrix} 0 \\ 0 \end{bmatrix}\\ \\
+&\Leftrightarrow \systeme{x_1-2x_2+x_3=0, 2x_1 + 3x_2 - x_3 = 0}
+\end{align*}
+\\
+
+The corresonding augmented matrix is:
+\\
+
+\begin{align*} &\begin{bmatrix} 1 & -2 & 1 & 0 \\ 2 & 3 & -1 & 0 \end{bmatrix} \\ \\
+&\begin{bmatrix} 1 & -2 & 1 & 0 \\ 0 & 7 & -3 & 0 \end{bmatrix}\\ \\
+&\begin{bmatrix} 1 & -2 & 1 & 0 \\ 0 & 1 & -\frac{3}{7} & 0 \end{bmatrix} 
+\end{align*}
+\\
+
+the the corresonding system of linear equations is:
+\begin{align*} \systeme{x_1-2x_2+x_3=0, x_2 -\frac{3}{7}x_3 = 0} \quad \quad \begin{aligned} &\textcircled{1} \\ &\textcircled{2} \end{aligned} \end{align*}
+\\
+
+Let \(x_3 = t\), \(t \in \mathbb{R}\) is a parameter\\
+then\\
+\(\textcircled{2} \rightarrow x_2 = \frac{3}{7}x_3 = \frac{3}{7}t\)\\
+and \(\textcircled{1} \rightarrow x_1 = 2x_2 - x_3 = 2(\frac{3}{7}t) - t = \frac{6}{7}t - t = -\frac{t}{7}\)
+\\
+
+then \(x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} -\frac{1}{7}t  \\ \frac{3}{7}t \\  t \end{bmatrix} = t \begin{bmatrix} -\frac{1}{7} \\ \frac{3}{7} \\ 1 \end{bmatrix}\)\\
+
+Then the solution set of (\(\ast\)) is\\
+
+\begin{align*} \left\{ x=\begin{bmatrix} -\frac{1}{7} \\ \frac{3}{7} \\ 1 \end{bmatrix}, \, t \in \mathbb{R} \right\} \end{align*}\\
+hence (\(\ast\)) has infinitely many solutions, and it is consistent.\\ \\
+
+Partitioned matrices:\\
+We can represent the system (\(\ast\)) or equivalently \(Ax=b\) by partitioning matrix \(A\) and \(x\) as follows:\\
+
+\begin{align*} &\Leftrightarrow \begin{bmatrix} a_{11}x_1 & a_{12}x_2 & a_{13}x_3 & \ldots & a_{1n}x_n \\ a_{21}x_1 & a_{22}x_2 & a_{32}x_3 & \ldots & a_{2n}x_n \\ a_{31}x_1 & a_{32}x_2 & a_{33}x_2 & \ldots & a_{3n}x_n \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ a_{m1}x_1 & a_{m2}x_2 & a_{m3}x_3 & \ldots & a_{mn}x_n \end{bmatrix} = b \\ \\
+&\Leftrightarrow x_1 \begin{bmatrix} a_{11} \\ a_{21} \\ a_{31} \\ \vdots \\ a_{m1} \end{bmatrix} + x_2 \begin{bmatrix} a_{12} \\ a_{22} \\ a_{32} \\ \vdots \\ a_{m2} \end{bmatrix} + x_3 \begin{bmatrix} a_{13} \\ a_{23} \\ a_{32} \\ \vdots \\ a_{m3} \end{bmatrix} + x_n \begin{bmatrix} a_{1n} \\ a_{2n} \\ a_{3n} \\ \vdots \\ a_{mn} \end{bmatrix} = b \\ \\
+\end{align*}
+\(A_i\) is of size \(m*1\) for \(1 \leq i \leq n\)\\
+
+\begin{align*} \Leftrightarrow x_1 A_1 + x_2 A_2 + x_3 A_3 + x_n A_n = b \end{align*}\\
+
+here \(A_1, \, A_2, \, A_3, \ldots, \, A_n\) for a partition of matrix \(A\)\\
+(i.e. \(A = \begin{bmatrix} A_1 & A_2 & A_3 & \ldots & A_n\end{bmatrix}\))\\
+
+hence \(Ax = x_1 A_1 + x_2 A_2 + x_3 A_3 + \ldots + x_n A_n = b\) \(\quad\) (\(2\ast\))\\
+This is a linear combination of the \(m*1\) matricies \(Ai\)'s (\(1 \leq i  \leq n\))
+\\ \\
+Remark:\\
+System (\(\ast\)): \(Ax+b\) is consistent \(\iff\) b can be exressed as such a linear combination as given in (\(2\ast\)), where: \(x_1, \, x_2, \, x_3, \ldots, x_n\) are solutions of the system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
