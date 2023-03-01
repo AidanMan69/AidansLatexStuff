@@ -274,6 +274,12 @@
 	"description": "text circle"
 },
 
-
+"pmatrix": {
+	"prefix": "pm",
+	"body": [
+	 	"\\begin{pmatrix} $1 \\\\\\ $2 \\end{pmatrix}"
+	 	],
+	"description": "pmatrix"
+},
 
 }
