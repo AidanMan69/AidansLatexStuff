@@ -71,30 +71,6 @@
 	"description": "dot"
 },
 
-"augmented 2x2": {
-	"prefix": "atw",
-	"body": [
-	 	"\\spalignaugmat{$1 $2 $3; $4 $5 $6}"
-	 	],
-	"description": "augmented 2x2"
-},
-
-"augmented 3x3": {
-	"prefix": "ath",
-	"body": [
-	 	"\\spalignaugmat{$1 $2 $3 $4; $5 $6 $7 $8; $9 $10 $11 $12}"
-	 	],
-	"description": "augmented 3x3"
-},
-
-"augmented 4x4": {
-	"prefix": "afo",
-	"body": [
-	 	"\\spalignaugmat{$1 $2 $3 $4 $5; $6 $7 $8 $9 $10; $11 $12 $13 $14 $15; $16 $17 $18 $19 $20}"
-	 	],
-	"description": "augmented 4x4"
-},
-
 "implies": {
 	"prefix": "imp",
 	"body": [
@@ -203,7 +179,7 @@
 },
 
 "parenthesis asterisk": {
-	"prefix": "ast",
+	"prefix": "pas",
 	"body": [
 	 	"(\\(\\ast\\))"
 	 	],
@@ -273,13 +249,109 @@
 	 	],
 	"description": "text circle"
 },
-
-"pmatrix": {
-	"prefix": "pm",
+``
+"bmatrix": {
+	"prefix": "bm",
 	"body": [
-	 	"\\begin{pmatrix} $1 \\\\\\ $2 \\end{pmatrix}"
+	 	"\\begin{bmatrix} $1 \\\\\\ $2 \\end{bmatrix}"
 	 	],
-	"description": "pmatrix"
+	"description": "bmatrix"
+},
+
+"asterisk": {
+	"prefix": "as",
+	"body": [
+	 	"\\ast"
+	 	],
+	"description": "asterisk"
+},
+
+"representative element": {
+	"prefix": "rpl",
+	"body": [
+	 	"$1_{ij}"
+	 	],
+	"description": "representative element"
+},
+
+"rectangular array": {
+	"prefix": "rect",
+	"body": [
+	 	"\\begin{bmatrix} $1_{11} & $1_{12} & $1_{13} & \\ldots & $1_{1n} \\\\\\ $1_{21} & $1_{22} & $1_{32} & \\ldots & $1_{2n} \\\\\\ $1_{31} & $1_{32} & $1_{33} & \\ldots & $1_{3n} \\\\\\ \\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\\ $1_{m1} & $1_{m2} & $1_{m3} & \\ldots & $1_{mn} \\end{bmatrix}"
+	 	],
+	"description": "rectangular array"
+},
+
+"summation": {
+	"prefix": "su",
+	"body": [
+	 	"\\sum_{$1}^{$2}"
+	 	],
+	"description": "summation"
+},
+
+"theorem": {
+	"prefix": "the",
+	"body": [
+	 	"\\begin{theorem}[$1] $2 \\end{theorem}"
+	 	],
+	"description": "theorem"
+},
+
+"remark": {
+	"prefix": "rem",
+	"body": [
+	 	"\\begin{remark} $1 \\end{remark}"
+	 	],
+	"description": "remark"
+},
+
+"defintion": {
+	"prefix": "def",
+	"body": [
+	 	"\\begin{definition}[$1] $2 \\end{definition}"
+	 	],
+	"description": "remark"
+},
+
+"proof": {
+	"prefix": "pro",
+	"body": [
+	 	"\\begin{proof} $1 \\end{proof}"
+	 	],
+	"description": "proof"
+},
+
+"ldots": {
+	"prefix": "ld",
+	"body": [
+	 	"\\ldots"
+	 	],
+	"description": "ldots"
+},
+
+"vdots": {
+	"prefix": "vd",
+	"body": [
+	 	"\\vdots"
+	 	],
+	"description": "vdots"
+},
+
+"ddots": {
+	"prefix": "dd",
+	"body": [
+	 	"\\ddots"
+	 	],
+	"description": "ddots"
+},
+
+"zero matrix notation": {
+	"prefix": "zmn",
+	"body": [
+	 	"0_{mn}"
+	 	],
+	"description": "zero matrix notation"
 },
 
 }
