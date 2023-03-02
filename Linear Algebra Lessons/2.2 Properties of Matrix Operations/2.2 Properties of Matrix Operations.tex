@@ -1,0 +1,190 @@
+\documentclass{jhwhw}
+\author{Aidan Garcia}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{spalign}
+\usepackage{nicefrac}
+\usepackage{tabto}
+\usepackage{parskip}
+\usepackage{systeme}
+\usepackage[english]{babel}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{example}
+\newtheorem*{example}{Example}
+
+\title{2.2: Properties of Matrix Operations}
+
+\begin{document}
+I) The Algebra of Matrices\\
+
+\begin{theorem}[Properties of matrix addition and scalar multiplication] Let \(A\), \(B\) and \(C\) be \(m*n\) matricies and \(c\), \(d\) be scalars \end{theorem}
+
+1) \(A+B=B+A\) (Commutative property of matrix addition)\\
+2) \(A+(B+C)=(A+B)+C\) (Associative property of matrix addition)\\
+3) \((cd)A = c(dA)\) (Associative property of scalar multilcation of matricies)\\
+4) \(c(A+B)=cA + cB\) (Distributive property of scalar multiplication of matricies)\\
+5) \((c+d)A = cA+dA\) (Distributive property of scalar multiplication of matricies)
+\\ \\
+\underline{Proofs of 1), 2), and 5):}
+\\
+\begin{proof} Let \(A=[a_{ij}]\) and \(B=[b_{ij}]\) for \(1 \leq i \leq m\), \(1 \leq j \leq n\)\\
+then \begin{align*} 
+A+B &= [a_{ij} + b_{ij}]\\
+&=[b_{ij} + a_{ij}]\\
+&=B+A
+\end{align*}
+\end{proof}
+\begin{proof} Let \(A=[a_{ij}]\), \(B=[b_{ij}]\) and \(C=[c_{ij}]\) for \(1 \leq i \leq m\), \(1 \leq j \leq n\)\\
+    then \begin{align*} 
+    A+(B+C) &= [a_{ij}] + [b_{ij} + c_{ij}]\\
+    &= [a_{ij} + b_{ij} + c_{ij}]\\
+    &= [(a_{ij} + b_{ij}) + c_{ij}] \, \text{ since the operation of addition is associative in } \mathbb{R}\\
+    &= (A+B)+C
+    \end{align*}
+\end{proof}
+\begin{proof} 
+    Let \(A=[a_{ij}]\) and \(B=[b_{ij}]\) for \(1 \leq i \leq m\), \(1 \leq j \leq n\) and let \(c \in \mathbb{R}\) be a scalar\\
+    then \begin{align*} 
+    c(A+B) &= c[a_{ij} + b_{ij}]\\
+    &= [c(a_{ij} + b_{ij})]\\
+    &= [c a_{ij} + c b_{ij}] \, \text{ by the distributive property of multilication with respect to addition in } \mathbb{R}\\
+    &=[c a_{ij}] + [c b_{ij}]\\
+    &=c[a_{ij}] + c[b_{ij}]\\
+    &=cA + cB
+    \end{align*}
+\end{proof}
+\begin{definition}[Zero matrix] The \(m*n\) matrix denoted by \(0_{mn}\) whose entries are all 0's is called the zero matrix of size \(m*n\) \end{definition}
+\begin{align*} 0_{mn} = \begin{bmatrix} 0 & 0 & \ldots & \ldots & 0 \\ 0 & 0 & \ldots & \ldots & 0 \\ 0 & 0 & \ldots & \ldots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & \ldots & \ldots & \ldots & 0  \end{bmatrix} \end{align*}
+
+Note: \(0_{mn} = a_{ij}\) where \(a_{ij}=0\) for any \(1 \leq i \leq m, \, 1 \leq j \leq m\)
+\begin{theorem}[Properties of the zero matrix] If \(A\) is an \(m*n\) matrix and \(c \in \mathbb{R}\) is a scalar, then \end{theorem}
+
+1) \(A + 0_{mn} = A\)\\
+2) \(A+(-A) = 0_{mn}\)\\
+3) If \(cA = 0_{mn}\) then \(c = 0\) or \(A = 0_{mn}\)
+\\
+
+\underline{Proof of 1):}
+\\
+\begin{proof} 
+Let \(A=[a_{ij}]\) for \(1 \leq i \leq m\), \(1 \leq j \leq n\)\\
+then \begin{align*} 
+& \Leftrightarrow \quad c[a_{ij}] = [0]\\
+& \Leftrightarrow \quad [c a_{ij}] = [0]\\
+& \Leftrightarrow \quad c a_{ij} = 0\\
+\end{align*}
+\(c=0\) or \(a_{ij} = 0_{mn}\)  for all \( 1 \leq i \leq m\), \(1 \leq j \leq n\)\\
+\(\implies \, A = 0_{mn}\)
+\end{proof}
+\textbf{Example.}
+    Let \(A = \begin{bmatrix} -2 & -1 \\ 1 & 0 \\ 3 & -4 \end{bmatrix}\) and \(B = \begin{bmatrix} 0 & 3 \\ 2 & 0 \\ -4 & -1 \end{bmatrix}\) and \(x\) be a \(3*2\) matrix. Solve the matrix equation \(3x+2A=B\) (\(\ast\))\\
+
+let \(x=\begin{bmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \\ x_{31} & x_{32} \end{bmatrix}\) where \(x_{ij} \in \mathbb{R}\) for \(1 \leq i \leq m\) and \(1 \leq j \leq n\)\\
+then \begin{align*} 
+(\ast) \, &\Leftrightarrow 3x + 2A = B\\
+& \Leftrightarrow 3x + 0_{mn} = B - 2A\\
+& \Leftrightarrow 3x = B - 2A\\
+& \Leftrightarrow \frac{1}{3}(3x) = (B-2A)\frac{1}{3}\\
+& \Leftrightarrow (\frac{1}{3} \centerdot 3)x = \frac{1}{3}(B-2A)\\
+& \Leftrightarrow x = \frac{1}{3}(B - 2A) \\
+& \Leftrightarrow x = \frac{1}{3}(\begin{bmatrix} 0 & 3 \\ 2 & 0 \\ -4 & -1\end{bmatrix} - 2 \begin{bmatrix} -2 & -1 \\ 1 & 0 \\ 3 & -4 \end{bmatrix})\\
+& \Leftrightarrow x = \frac{1}{3}(\begin{bmatrix} 0 & 3 \\ 2 & 0 \\ -4 & -1\end{bmatrix} + \begin{bmatrix} 4 & 2 \\ -2 & 0 \\ -6 & 8 \end{bmatrix})\\
+& \Leftrightarrow x = \frac{1}{3}(\begin{bmatrix} 4 & 5 \\ 0 & 0 \\ -10 & 7\end{bmatrix})\\
+& \Leftrightarrow x = \begin{bmatrix} \nicefrac{4}{3} & \nicefrac{5}{3} \\ 0 & 0 \\ -\nicefrac{10}{3} & \nicefrac{7}{3} \end{bmatrix}
+\end{align*}
+\\ \\
+
+\begin{theorem}[Properties of matrix multilication] Let \(A\), \(B\) and \(C\), be matricies (with sizes such that the matrix products given below are defined) and let \(\alpha \in \mathbb{R}\)  be a scalar\end{theorem}
+
+1) \(A(BC) = (AB)C\) (Associative property of multiplication)\\
+2) \(A(B+C) = AB+AC\) (Distributive property of matrix mult. w.r.t matrix addition)\\ 
+3) \((A+B)C = AC + BC\) (Distributive property of matrix mult. w.r.t matrix addition)\\
+4) \(\alpha (AB) = (\alpha A)B = A(\alpha B)\)
+\\
+
+\underline{Proof of 2):}
+\\
+\begin{proof} 
+Let \(A=[a_{ij}]\) be an \(m*n\) matrix\\ and let \(B = [b_{ij}]\) and  \(C = [c_{ij}]\) be \(n*p\) matricies, \\
+then \(B+C = [b_{ij} + c_{ij}]\) is an \(n*p\) matrix\\
+hence \(A(B+C)\) is a well defined matrix of \(m*p\)\\
+let \(A(B+C) = [d_{ij}]\)
+
+Recall: If \(A = [a_{ij}]\) is an \(m*n\) matrix, and \(B = [b_{ij}]\) be an \(n*p\) matrix, then \(AB\) is an \(m*p\) matrix and \(AB = [c_{ij}]\) where \(cij = \sum_{k=1}^{n} a_{ik} b_{kj}\)
+
+here, \begin{align*} 
+d_{ij} &= \sum_{k=1}^{n} a_{ik}(b_{kj}+c_{kj})\\
+&= \sum_{k=1}^{n} a_{ik} b_{kj} + a_{ik} c_{kj}\\
+&= \sum_{k=1}^{n} a_{ik} b_{kj} + \sum_{k=1}^{n} a_{ik} c_{kj}\\
+&= q_{ij} + r_{ij}
+\end{align*}
+where \(AB=[q_{ij}] = [\sum_{k=1}^{n} a_{ik} b_{kj}]\)\\
+and \(AC=[r_{ij}] = [\sum_{k=1}^{n} a_{ik} c_{kj}]\)\\
+hence \(A(B+C)= AB + AC\)
+\end{proof}
+
+\begin{remark} Let \(A\) and \(B\) be matricies, with sizes such that products given below are well defined \end{remark}
+1) \((A+B)^2 \neq A^2 + 2AB + B^2 \) \(\,\) in general since \((A+B)^2 = (A+B)(A+B) = A^2 +AB + BA + B^2\). However, you must be careful since \(AB \neq BA\) in general.
+
+2) \((A-B)^2 \neq A^2 - 2AB + B^2 \) \(\,\) in general since \((A+B)^2 = (A+B)(A+B) = A^2 -AB - BA + B^2\)
+\\ \\
+
+\begin{definition}[Diagonal of a matrix] Let \(A = [a_{ij}]\) be an \(n*n\) matrix, then its \underline{diagonal} consists of the entries \(a_{ii}\) for any \(1 \leq i \leq n\) \end{definition}
+\begin{align*} A = \begin{bmatrix} a_{11} & a_{12} & a_{13} & \ldots & a_{1n} \\ a_{21} & a_{22} & a_{23} & \ldots & a_{2n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\  a_{n1} & a_{n2} & a_{n3} & \ldots & a_{nn} \end{bmatrix} \end{align*}
+and its trace is the sum of all diagonal entries, that is: 
+\begin{align*} 
+Trace(A) &= a_{11} + a_{22} + a_{33} + \ldots + a_{nn}\\
+&= \sum_{i=1}^{n} a_{ii}
+\end{align*}
+\begin{definition}[Identity Matrix] An \(n*n\) matrix, \(n \geq 1\) that has 1 on all its diagonal entries and 0's elsewhere is called the indentity matrix of order n (size \(n*n\)). It is denoted by \(I_n\) \end{definition}
+\begin{align*} I_n = [a_{ij}] \text{ where } a_{ij} = \begin{cases} 1 \text{ if } i=j \\ 0 \text{ if } i \neq j \end{cases} \text{where } 1 \leq i \leq n, \, 1 \leq j \leq n\end{align*}
+\begin{align*} I_n = \begin{bmatrix} 1 & 0 & 0 & \ldots & 0 \\ 0 & 1 & 0 & \ldots & 0 \\ 0 & 0 & 1 & \ldots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & \ldots & \ldots & \ldots & 1  \end{bmatrix} \end{align*}
+
+\begin{example}
+\(I_1 = \begin{bmatrix} 1 \end{bmatrix}, \, I_2 = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}, \, I_3 = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}\)    
+\end{example}
+\begin{remark} The matrix \(I_n\) (\(n \geq 1\)) serves as the identity element for matrix multiplication \end{remark}
+
+\begin{theorem}[Properties of the identity matrix] If \(A\) is a matrix of size \(m*n\), then \end{theorem}
+\begin{align*} & 1) \, AI = A\\
+& 2) \, IA = A
+\end{align*}
+
+\textbf{Example.}
+Consider the \(4*4\) matrix \(A = \begin{bmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \end{bmatrix}\) . Show that there exists a positive integer \(n\) such that \(A^n = 0_{44}\)
+\begin{align*} A^2 = AA &= \begin{bmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0  \end{bmatrix} \begin{bmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0  \end{bmatrix}\\ \\
+&= \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0  \end{bmatrix}
+\end{align*}
+\begin{align*} 
+    A^3 = A^2 A &= \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0  \end{bmatrix} \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0  \end{bmatrix}\\ \\
+&= \begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0  \end{bmatrix}
+\end{align*}
+\begin{align*} 
+    A^4 = A^3 A &= \begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \end{bmatrix} \begin{bmatrix}  0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0  \end{bmatrix}\\ \\
+    &= \begin{bmatrix}  0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0\end{bmatrix} \\ \\
+&= 0_{44}
+\end{align*}
+\(\boxed{\therefore n = 4}\)
+\\ \\ \\
+
+\textbf{Exercises:}\\
+Prove 1), 2), 3) for properties of zero matrix\\
+Prove 1), 3), 4) for properties of matrix multiplication
+
+
+
+\end{document}
+
+
