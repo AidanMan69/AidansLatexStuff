@@ -1,0 +1,156 @@
+\documentclass{jhwhw}
+\author{Aidan Garcia}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{spalign}
+\usepackage{nicefrac}
+\usepackage{tabto}
+\usepackage{parskip}
+\usepackage{systeme}
+\usepackage[english]{babel}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{example}
+\newtheorem*{example}{Example}
+ 
+\title{Defintitions, Theorems, Remarks 2.4 - 4.3}
+
+\begin{document}
+\section{Elementary Matrices}
+\begin{definition}[Elementary Matrix] An \(n \times n\) matrix \(E\), \(n \geq 1\) is an elementary matrix when it can be obtained from the identity matrix \(I_n\) by a single elementary row operation. \end{definition}
+\begin{theorem}[Representing Elementary Row Operations] Let \(E\) be the elementary matrix obtained by performing an elementary row operation on \(I_n\) for \(n \geq 1\).
+If that same elementary row operation is performed on an \(m \times n\) matrix \(A\), then the resulting matrix is the matrix \(EA\).\end{theorem}
+\begin{definition}[Row Equivalence of Matrices] Let \(A\) and \(B\) be \(m \times n\) matrices. Then matrix \(B\) is said to be row-equivalent to matrix \(A\) if and only if there exists a finite number of elementary matrices: \(E_1, E_2, E_3, \ldots, E_k\), for \(k \geq 1\) such that:
+\begin{align*} B = E_k E_{k-1} E_{k-2} \ldots E_3 E_2 E_1 A \end{align*}\end{definition}
+\begin{theorem}[Elementary Matrices are Invertible] If \(E\) is an elementary matrix, then \(E^{-1}\) exists and it is also an elementary matrix \end{theorem}
+\begin{theorem}[A Property of Invertible Matrices] A square matrix \(A\) is invertible if an only if it can be written as a finite product of elementary matrices \end{theorem}
+\begin{remark} Let \(A\) be an \(n \times n\) matrix, \(n \geq 1\) , then by Theorem 3:\\
+\(A\) is invertible \(\Leftrightarrow\) There exists \(E_1,E_2,E_3,\ldots,E_k\), \(k \geq 1\) elementary matrices of size \(n \times n\) such that: \\
+\(A=E_k E_{k-1} E_{k-2} \ldots E_1 I_n\) \(\Leftrightarrow\) \(A\) is row-equivalent to \(I_n\)
+\end{remark}
+\begin{theorem}[On Some Equivalent Conditions] If \(A\) is an \(n \times n\) matrix, \(n \geq 1\), then the statements given below are equivalent:\\
+1) \(A\) is invertible\\
+2) \(Ax = b\) has a unique solution for every \(n \geq 1\) column matrix b\\
+3) \(Ax = 0\) has only the trivial solution\\
+4) \(A\) is row equivalent to \(I_n\)\\
+5) \(A\) can be written as a finite roduct of elementary matrices \end{theorem}
+\begin{definition}[An LU-Factorization] If the \(n \times n\) matrix \(A\) (\(n \geq 1\)) can be written as the roduct of a lower triangular matrix \(L\) and an upper triangular matrix \(U\) then,
+\begin{align*} A = LU \end{align*} 
+Is an \(LU\) factorization of matrix \(A\) as a pproduct of two matrices.\end{definition}
+\begin{remark} If matrix \(A\) reduces to an upper triangular matrix using only the row operation of adding a multiple of one row to another row below it, then \(A\) has an LU-Factorization. We have:
+\begin{align*} E_k E_{k-1} E_{k-2} \ldots E_2 E_1 A = U (\ast) \end{align*}
+Note: \(E_i\) is obtained by only aplying the row operation of adding a muiltiple of one row on \(I_n\)\\
+hence, \begin{align*} (\ast) \Leftrightarrow A &= (E^{-1}_1 E^{-1}_2 E^{-1}_3 \ldots E^{-1}_{k-1} E^{-1}_k)U\\
+&= LU \end{align*} \end{remark}
+\section{The Determinant of a Matrix}
+\begin{definition}[Determinant of a \(2 \times 2\) matrix] The determinant of the matrix \begin{align*} A &= \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} \\ \det(A) &= a_{11} a_{22} - a_{21} a_{12} \end{align*}  \end{definition}
+\begin{definition}[Minor and Cofactor] If \(A\) is a square matrix, then the minor \(M_{ij}\) of the entry \(a_{ij}\) is the determinant of the matrix obtained by the deleting the \(i^{\text{th}}\) row and the \(i^{\text{th}}\) column of \(A\) \end{definition}
+\begin{definition}[Determinant of a Square \(n \times n\) matrix \(n \geq 2\)] If \(A\) is a square matrix of order \(n \geq 2\), then the determinant of \(A\) is the sum of entries in the first row multilied by their respective cofactor.
+\begin{align*} A = \begin{bmatrix} a_{11} & a_{12} & a_{13} & \ldots & a_{1n} \\ a_{21} & a_{22} & a_{23} & \ldots & a_{2n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & a_{n3} & \ldots & a_{nn} \end{bmatrix} \end{align*} then
+\begin{align*} \det(A) = |A| &= \sum_{j=1}^{n} a_{1j} c_{1j}\\
+&= a_{11} c_{11} + a_{12} + c_{12} + \ldots + a_{1n} c_{1n}  \end{align*}  \end{definition}
+\begin{remark} Definition 6 is inductive because it uses the determinant of a suqare matrix of order \(n-1\) to define the determinant of a matrix of order n \end{remark}
+\begin{theorem}[Finding the Determinant by Expansion of Cofactors] Let \(A\) be a square matrix of order \(n \geq 2\), then the dterminant of \(A\) is:
+\begin{align*} \det (A) = |A| &= \sum_{j=1}^{n} a_{ij} c_{ij}\\
+&= a_{i1} c_{i1} + a_{i2} c_{i2} + \ldots + a_{in} c_{in}\end{align*} or
+\begin{align*} \det (A) = |A| &= \sum_{i=1}^{n} a_{ij} c_{ij}\\
+    &= a_{1j} c_{1j} + a_{2j} c_{2j} + \ldots + a_{nj} c_{nj} \end{align*}\end{theorem}
+\begin{remark} Keep in mind tat while expanding by cofactors, you do not need to find cofactors of zero entries since if \(a_{ij} = 0\) then \(a_{ij} c_{ij} = 0 c_{ij} = 0\) hence the row (or column) containing most zeros is the best choice for expansion by cofactors \end{remark}
+\begin{definition}[Diagonal Matrix] An \(n \times n\) matrix, \(n \geq 1\), in which all entries above and below the main diagonal are zero is called a diagonal matrix \end{definition}
+\begin{remark} \(A = [a_{ij}] \text{ for } 1 \leq i \leq n, \, 1 \leq j \leq n\) is diagonal \(\Leftrightarrow\) \(a_{ij} = 0\) for \(i \neq j\) \end{remark}
+\begin{theorem}[Determinant of a Triangular Matrix] If \(A\) is a triangular matrix of order \(n\), \(n \geq 1\) then its determinant is the roduct of the entries in the diagonal, that is 
+\begin{align*} \det(A) &= a_{11} a_{22} a_{33} \ldots a_{nn}\\
+&= \prod_{i=1}^{n} a_{ii}  \end{align*} \end{theorem}
+\begin{theorem}[Deterninant of an Upper or Lower Triangular Matrix] If \(A\) is triangular (upper or lower matrix of order \(n \geq 1\), and if \(A = [a_{ij}]\) for \(1 \leq n\), \(1 \leq j \leq n\))
+then its determinant is the product of the entries on the main diagonal that is: 
+\begin{align*} \det(A) = |A| &= a_{11} a_{22} a_{33} \ldots a_{nn}\\
+&= \prod_{i=1}^{n} a_{ii} \end{align*}\end{theorem}
+\section{Determinants and Elementary Row Operations}
+\begin{theorem}[Elementary Row Operations and Determinants] Let \(A\) and \(B\) be square matrices of the same size, then\\
+1) When \(B\) is obtained from \(A\) by interchanging two rows of \(A\), then \(\det(A) = - \det(B)\)\\
+2) When \(B\) is obtained from \(A\) by adding a multiple of a row of \(A\) to another row, then \(\det(B) = \det(A)\)\\
+3) When \(B\) is obtained from \(A\) by multiplying a row of \(A\) by a non-zero contstant \(c\), then \(\det(B) = c \det(A)\) \end{theorem}
+\begin{remark} 1) In Theorem 8, rules 1), 2), 3) remain valid if we replace "row" with "column"\\
+2) Operations performed in the columns of a matrix are called elementary column operations. Two matrices are column equivalent when one can be obtained from the other by elementary column operations.\end{remark}
+\begin{theorem}[Conditions That Yield a Zero Deteriminant] If A is a square matrix and any of the conditions given below is true, then \(\det(A)=0\)\\
+1) An entire row (or an entire column) consists of zeros\\
+2) Two rows (or two columns) are equal\\
+3) One row (or one column) is a multiple of another row (or column) \end{theorem}
+\section{Properties of Determinants}
+\begin{theorem}[Determinant of a Finite Matrix Product] If \(A\) and \(B\) are square matrices of order \(n \geq 1\) then: \(\det(AB) = \det(A) \det(B)\) \end{theorem}
+\begin{remark} If \(A_1 A_2 A_3 \ldots A_k (k \geq 1) \)\\
+If these are matrices of the same order \(n \geq 1\), then
+\begin{align*} & \det (A_1 A_2 A_3 \ldots A_k) = \det (A_1) \det (A_2) \det (A_3) \ldots \det(A_k)\\
+ & \Leftrightarrow \det (\prod_{i=1}^{n} A_i) = \prod_{i=1}^{n} \det(A_i) \end{align*}\end{remark}
+\begin{theorem}[Determinant of a Scalar Multiple of a Matrix] If \(A\) is a square matrix of order \(n \geq 1\) and \(c\) is a scalar, then
+\begin{align*} \det(cA) = c^n \det(A) \end{align*} \end{theorem}
+\begin{theorem}[Determinant of an Invertible Matrix] A square matrix \(A\) is invertible (non-singular) iff \(\det(A) \neq 0\) \end{theorem}
+\begin{theorem}[Determinant of an Inverse Matrix] If \(A\) is an \(n \times n\), \(n \geq 1\) matrix, then \(\det (A^{-1}) = \frac{1}{\det(A)}\) \end{theorem}
+\begin{theorem}[Determinant of the Transpose of a Matrix] If \(A\) is a square matrix, then \(\det(A^T) = \det(A)\) \end{theorem}
+\begin{theorem}[Equivalent Conditions for a Non-Singular Matrix] If \(A\) is an \(n \times n\), \(n \geq 1\) matrix then the following statements are equivalent:\\
+1) \(A\) is invertible\\
+2) \(Ax = b\) has a unique solution for ever \(n \times 1\) column matrix \(b\)\\
+3)\(Ax = 0\) has only the trivial solution\\
+4) \(A\) is row-equivalent to \(I_n\)\\
+5) \(A\) can be written as a finite product of elementary matrices\\
+6) \(\det(A) \neq 0\) \end{theorem}
+\section{Vector Spaces}
+\begin{definition}[Vector Spaces] Let \(V\) be a set on which we have the operations: vector addition and vector scalar multiplication are defined. If the axioms listed below are satisfied for any
+vectors \(u\), \(v\), and \(w\) and any scalars \(c\) and \(d\) in \(\mathbb{R} \, (v, \, t, \, \cdot)\) is a vector space.\\
+I) Axioms of Additon:\\
+1) \(u + v \in V\) (closure under addition)\\
+2) \(u + v = v + u\) (commutative property of vector addition)\\
+3) \(u+(v+w) = (u+v)+w\) (associative property of vector addition)\\
+4) \(V\) has a zero vector \(\vec{0}\) such that for every \(v\) in \(V\), \(u + \vec{0} = \vec{0} + u = u\)
+5) For any \(u\) in \(V\), there exists a vector in \(V\) denoted by: \(-u\) such that: \(u+(-u)=\vec{0}\)
+
+II) Axioms of Scalar Multiplication\\
+6) \(cu \in V\) (closure under scalar multiplication)\\
+7) \(c(u + v) = cu + cv\)\\
+8) \((c+d)u = cu + du\)\\
+9) \(c(du) = (cd)u\)\\
+10) \(1u = u\)
+\end{definition}
+\begin{remark} If one of the ten axioms fails then set \(V\) equipped with the operation of addition and scalar multiplication is not a vector\end{remark}
+\begin{remark} \(\mathbb{R}^n = \{(x_1, x_2, x_3, \ldots, x_n) | x_i \in \mathbb{R} \text{ for any } 1 \leq i \leq n\} \)\\
+Then \((\mathbb{R}, +, \cdot)\) is a vector space (Verify it!) \end{remark}
+\begin{theorem}[Properties of Scalar Multilication] Let \(V\) be a vector space. Let \(v \in V\) and \(c\) any scalar. The the following properties are true:\\
+1) \(0v = \vec{0}\)\\
+2) \(c \vec{0} = \vec{0}\)\\
+3) If \(cv = 0\) then either \(c = 0\) or \(v = 0\)\\
+4) \((-1)v = -v\) \end{theorem}
+\section{Sub Spaces of a Vector Space}
+\begin{definition}[Subspace of a Vector Space] A non-empty subspace \(w\) of a vector space \(v\) is a subspace of \(v\) when \(w\) is a vector sace under the operations
+of addition and scalar multiplication defined in \(v\) \end{definition}
+\begin{theorem}[Test for a Subspace] If \(w\) is a non-emty subset of a vector space \(v\), then \(w\) is a subspace of \(v\) if and only if the two closure conditions
+listed below hold:\\
+1) If \(u\) and \(v\) are in \(w\), then \(u+v \in w\)\\
+2) If \(u\) is in \(w\) and \(c\) is a scalar, then \(cu \in w\) \end{theorem}
+\begin{remark} \(w\) is a subsace of vector space \(v\)\\
+\(\Leftrightarrow \emptyset \neq w \subseteq v \text{ and } w\) is closed under vector addition and scalar multiplication \end{remark}
+\begin{remark} Sometimes we may encounter in applications sequences of nestled subspaces (one is contained with the others). For example, if we consider the vector space \(P_k\)
+of polynomials of degree less or equal to \(k\), then
+\begin{align*} P_0 \subset P_1 \subset P_2 \subset \ldots \subset P_k \subset \ldots \subset P_n \text{ for any } 0 \leq k \leq n\end{align*} \end{remark}
+\begin{remark} If \(w\) is a subspace of vectorspace \(v\), then \(\{ 0_v\} \subseteq w \subseteq v\) \\
+If \(w = \{0_v\}\) or \(w=v\) then \(w\) is a trivial subspace of \(v\)\\
+If \(\{0_v\} \subset w \subset v\), then \(w\) is a proper space of \(v\) \end{remark}
+\begin{theorem}[The Intersection of Two Subspaces is a Subspace] If \(u\) and \(w\) are subspaces of vector space \(v\), then their intersection
+\(u \cap w\) is also a subspace of \(v\)  \end{theorem}
+\begin{remark} Let \(w \subset \mathbb{R}^2\) (equipped with standard addition and scalar multiplication) then \(w\) is a subspace of \(\mathbb{R}^2\)\\
+\(\Leftrightarrow\) 1) \(w = \{(0,0)\}\)\\
+or\\
+2) \(w = \mathbb{R}^2\)\\
+or\\
+3) \(w\) is the set of all ordered pairs lying on a line passing through the origin \end{remark}
+\end{document}

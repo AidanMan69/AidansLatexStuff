@@ -1,0 +1,71 @@
+\documentclass{jhwhw}
+\author{Aidan Garcia}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{spalign}
+\usepackage{nicefrac}
+\usepackage{tabto}
+\usepackage{parskip}
+\usepackage{systeme}
+\usepackage[english]{babel}
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{example}
+\newtheorem*{example}{Example}
+ 
+\title{Proofs 2.4 - 4.3 (from notes)}
+
+\begin{document}
+\section{Elementary Matrices}
+44 in 2.4\\
+1) Prove that \(A\) is idempotent if and only if \(A^T\) is idempotent\\
+2) Prove that if \(A\) is an \(n \times n\) matrix that is idempotent and invertible, then \(A = I_n\)\\
+3) Prove that if \(A\) and \(B\) are idempotent and \(AB=BA\), then \(AB\) is idempotent\\
+4) Prove that if \(A\) is row-equivalent to \(B\) and \(B\) is row-equivalent to \(C\), then \(A\) is row-equivalent to \(C\)\\
+5) Prove that if matrix \(A\) is row equivalent to matrix \(B\) then matrix \(B\) is row equivalent to matrix \(A\)\\
+6) Let \(A\) be a nonsingular matrix. Prove that if \(B\) is row-equivalent to \(A\), then \(B\) is also non-singular. 
+\section{The Determinant of a Matrix}
+\begin{theorem}[Determinant of an Upper or Lower Triangular Matrix]  If \(A\) is triangular (upper or lower matrix of order \(n \geq 1\), and if \(A = [a_{ij}]\) for \(1 \leq n\), \(1 \leq j \leq n\))
+    then its determinant is the product of the entries on the main diagonal that is: 
+    \begin{align*} \det(A) = |A| &= a_{11} a_{22} a_{33} \ldots a_{nn}\\
+    &= \prod_{i=1}^{n} a_{ii} \end{align*} \end{theorem}
+\section{Determinants and Elementary Row Oerations}
+\begin{theorem}[Elementary Row Operations and Determinants] Let \(A\) and \(B\) be square matrices of the same size, then\\
+    1) When \(B\) is obtained from \(A\) by interchanging two rows of \(A\), then \(\det(A) = - \det(B)\)\\
+    2) When \(B\) is obtained from \(A\) by adding a multiple of a row of \(A\) to another row, then \(\det(B) = \det(A)\)\\
+    3) When \(B\) is obtained from \(A\) by multiplying a row of \(A\) by a non-zero contstant \(c\), then \(\det(B) = c \det(A)\) \end{theorem}
+\begin{theorem}[Conditions That Yield a Zero Determinant] If \(A\) is a square matrix and any of the conditions given below is true, then \(\det(A) = 0\)\\
+1) An entire row (or an entire column) consists of zeros\\
+2) Two rows (or two columns) are equal\\
+3) One row (or one column) is a multiple of another row (is a multiple of another column) \end{theorem}
+\section{Properties of Determinants}
+\begin{theorem}[Determinant of a Finite Matrix Product] If \(A\) and \(B\) are square matrices of order \(n \geq 1\) then: \(\det(AB) = \det(A) \det(B)\) \end{theorem}
+\begin{remark} If \(A_1 A_2 A_3 \ldots A_k (k \geq 1) \)\\
+If these are matrices of the same order \(n \geq 1\), then
+\begin{align*} & \det (A_1 A_2 A_3 \ldots A_k) = \det (A_1) \det (A_2) \det (A_3) \ldots \det(A_k)\\
+ & \Leftrightarrow \det (\prod_{i=1}^{n} A_i) = \prod_{i=1}^{n} \det(A_i) \end{align*}\end{remark}
+\begin{theorem}[Determinant of a Scalar Multiple of a Matrix] If \(A\) is a square matrix of order \(n \geq 1\) and \(c\) is a scalar, then
+\begin{align*} \det(cA) = c^n \det(A) \end{align*} \end{theorem}
+1) Let \(A\) and \(B\) be \(n \times n\) matrices such that \(AB = I\). Prove that \(|A| \neq 0 \) and \(B \neq 0\)\\
+2) Let \(A\) and \(B\) be \(n \times n\) matrices such that \(AB\) is singular. Prove that either \(A\) or \(B\) is singular\\
+3) Let \(A\) be an \(n \times n\) matrix in which the entires of each row sum to zero. Find \(|A|\)\\
+4) Prove that the determinant of an invertible matrix \(A\) is equal to \(\pm 1\) when all of the entries of \(A\) and \(A^{-1}\) are integers\\
+5) If \(A\) is a square matrix, then \(\det (A) = \det(A^T)\)\\
+6) A square matrix is skew-symmetric when \(A^T = -A\). Prove that if \(A\) is an \(n \times n\) skew-symmetric matrix, then \(|A| = (-1)^n |A|\)\\
+7) Let \(A\) be a skew-symmetric matrix of odd order. Use the result of exercise 69 (6) to prove that \(|A| = 0\)\\
+8) Prove that the \(n \times n\) identity matrix is orthogonal\\
+9) Prove that if \(A\) is an orthogonal matrix, then \(|A| = \pm 1\)\\
+10) If \(A\) is an idempotent matrix \((A^2 = A)\), then prove that the determinant of \(A\) is either \(0 \text{ or } 1\)\\
+11) Let \(S\) be an \(n \times n\) singular matrix. Prove that for any \(n \times n\) matrix B, the matrix \(SB\) is also singular
+\end{document}
